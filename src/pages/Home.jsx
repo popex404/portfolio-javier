@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, MapPin, FileText, ExternalLink, Github, Twitter, Linkedin } from 'lucide-react'
 import ProjectCard from '../components/ProjectCard'
@@ -86,6 +87,7 @@ const skills = [
 ]
 
 export default function Home() {
+  const [avatarError, setAvatarError] = useState(false)
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
@@ -98,13 +100,14 @@ export default function Home() {
               <img
                 src={`${import.meta.env.BASE_URL}avatar.jpg`}
                 alt="Javier García"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.target.style.display = 'none'
-                  e.target.nextSibling.style.display = 'flex'
-                }}
+                className={avatarError ? 'hidden' : 'w-full h-full object-cover'}
+                onError={() => setAvatarError(true)}
               />
-              <div className="hidden w-full h-full items-center justify-center text-4xl">
+              <div
+                className={`${avatarError ? 'flex' : 'hidden'} w-full h-full items-center justify-center text-4xl`}
+                role="img"
+                aria-label="Avatar de Javier García"
+              >
                 👨‍💻
               </div>
             </div>
@@ -183,20 +186,23 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Proof of Work — mobile only, appears after About and before Projects */}
+            {/* Background + Skills — mobile only, appears after About and before Projects */}
             <section
               className="lg:hidden bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-fade-in"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
-                Proof of Work
+                Background
               </h2>
-              <div className="space-y-2 text-sm text-muted-foreground leading-relaxed">
-                <p>🏆 Top analista · <span className="text-primary">Flipside Crypto</span></p>
-                <p>🧪 Data Alchemist · <span className="text-primary">CovalentHQ</span></p>
-                <p>🧙‍♂️ Sensei · <span className="text-primary">Struct Finance (Avalanche)</span></p>
-                <p>🔥 Ambassador · <span className="text-primary">BlazeStake (Solana)</span></p>
-                <p>🎯 Hackathon Churn · <span className="text-primary">Alura Latam + No Country</span></p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                Ingeniería Civil en Ciencias de la Computación, Universidad de Chile (plan común). Inglés C1. Cuatro años de trabajo real en comunidades angloparlantes: análisis, whitepapers, coordinación con equipos en EE.UU. 100% remoto desde Chile. Disponibilidad inmediata.
+              </p>
+              <div className="border-t border-border/50 pt-4">
+                <div className="flex flex-wrap gap-2">
+                  {skills.map((s) => (
+                    <SkillBadge key={s}>{s}</SkillBadge>
+                  ))}
+                </div>
               </div>
             </section>
 
@@ -218,9 +224,9 @@ export default function Home() {
           {/* Right — sidebar */}
           <aside className="space-y-6">
 
-            {/* Contact */}
+            {/* Contact — desktop only (hero already has contact links) */}
             <section
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
+              className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
@@ -264,9 +270,9 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Background + Skills */}
+            {/* Background + Skills — desktop only (mobile version is in main content above) */}
             <section
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
+              className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">

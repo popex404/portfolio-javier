@@ -171,7 +171,7 @@ export default function CV() {
               Universidad de Chile. Top Analista en Flipside Crypto y Data Alchemist en CovalentHQ,
               con experiencia en análisis on-chain en múltiples redes blockchain para comunidades
               angloparlantes. El mismo rigor aplicado a machine learning y automatización de datos.
-              Inglés C1. Trabajo 100% remoto desde Valparaíso, Chile.
+              Inglés C1.
             </p>
 
             {/* Experiencia */}

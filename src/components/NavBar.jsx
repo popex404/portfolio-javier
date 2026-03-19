@@ -51,7 +51,7 @@ export default function NavBar() {
               to={to}
               end
               className={({ isActive }) =>
-                `px-2 py-1 rounded text-xs transition-colors ${
+                `px-2 py-1 min-h-[44px] flex items-center rounded text-xs transition-colors ${
                   isActive
                     ? 'text-primary font-medium'
                     : 'text-muted-foreground hover:text-foreground'

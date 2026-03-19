@@ -38,6 +38,7 @@ export default function ProjectCard({ title, role, description, tech = [], impac
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-primary hover:underline py-2 min-h-[44px] flex items-center"
+              aria-label={`${r.label} — ${title}`}
             >
               {r.label}
             </a>
@@ -49,6 +50,7 @@ export default function ProjectCard({ title, role, description, tech = [], impac
         <Link
           to={linkTo}
           className="text-sm text-primary hover:underline mt-2 inline-block relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+          aria-label={`${linkText || linkTo} — ${title}`}
         >
           {linkText || linkTo}
         </Link>
@@ -61,6 +63,7 @@ export default function ProjectCard({ title, role, description, tech = [], impac
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm text-primary hover:underline mt-2 inline-block relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+          aria-label={`${linkText || link} — ${title}`}
         >
           {linkText || link}
         </a>
