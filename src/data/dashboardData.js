@@ -13,6 +13,7 @@ export const CHAIN_CONFIG = {
   Arbitrum:   { color: '#28A0F0', bg: 'rgba(40,160,240,0.12)', border: 'rgba(40,160,240,0.35)' },
   Evmos:      { color: '#E646A0', bg: 'rgba(230,70,160,0.12)', border: 'rgba(230,70,160,0.35)' },
   Aurora:     { color: '#78DC50', bg: 'rgba(120,220,80,0.12)', border: 'rgba(120,220,80,0.35)' },
+  Covalent:   { color: '#DC5A00', bg: 'rgba(220,90,0,0.12)',  border: 'rgba(220,90,0,0.35)'   },
 }
 
 // Platform that provided the data
@@ -83,7 +84,7 @@ export const ANALYSES = [
 // Full dashboard screenshots
 const base = import.meta.env.BASE_URL
 export const FULL_DASHBOARDS = [
-  { id: 43, title: 'Uniswap NFT Aggregator — Dashboard Completa', chains: ['Ethereum'], platform: 'Flipside', date: 'Dec 21, 2022', url: 'https://x.com/Popex404/status/1605640423308988448', image: `${base}dashboards/uniswap-nft.jpg` },
+  { id: 43, title: 'Uniswap NFT Aggregator — Análisis del Agregador de marketplaces NFTs de Uniswap', chains: ['Ethereum'], platform: 'Flipside', date: 'Dec 21, 2022', url: 'https://x.com/Popex404/status/1605640423308988448', image: `${base}dashboards/uniswap-nft.jpg` },
   { id: 44, title: 'TerraDash — Smart Contracts Populares en Terra', chains: ['Terra Luna'], platform: 'Flipside', date: 'Dec 22, 2022', url: 'https://x.com/Popex404/status/1605757359208423425', image: `${base}dashboards/terradash.jpg` },
   { id: 45, title: 'Staking en Solana — Revisión de Protocolos LST', chains: ['Solana'], platform: 'Flipside', date: 'Dec 24, 2022', url: 'https://x.com/Popex404/status/1606447953526374402', image: `${base}dashboards/staking-solana.jpg` },
   { id: 46, title: 'Optimism $OP — Drivers del Cambio de Precio', chains: ['Optimism'], platform: 'Flipside', date: 'Dec 24, 2022', url: 'https://x.com/Popex404/status/1606512806517510144', image: `${base}dashboards/op-price.jpg` },

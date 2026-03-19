@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ExternalLink, ChevronLeft, ChevronRight, Twitter, ChevronDown } from 'lucide-react'
 import { ANALYSES, FULL_DASHBOARDS, SPECIALS, CHAIN_CONFIG, PLATFORM_CONFIG } from '../data/dashboardData'
 
-const PRIMARY_CHAINS = ['Solana', 'Avalanche', 'Ethereum', 'NEAR']
+const PRIMARY_CHAINS = ['Solana', 'Avalanche', 'Ethereum', 'NEAR', 'Covalent']
 const SECONDARY_CHAINS = ['BSC', 'Base', 'Cosmos', 'Algorand', 'Terra Luna', 'Flow', 'Arbitrum', 'Evmos', 'Aurora']
 
 function ChainBadge({ chain, small = false }) {
@@ -121,7 +121,7 @@ function DashboardCarousel() {
         Capturas de mis Dashboards
       </h2>
       <p className="text-xs text-muted-foreground mb-4 -mt-1">
-        Snapshots de dashboards desarrolladas entre 2022 y 2024 en Flipside Crypto y CovalentHQ. Los informes originales ya no están disponibles online — estos son los registros visuales que quedan.
+        Snapshots de dashboards desarrolladas usando FlipsideCrypto. Los informes originales ya no están disponibles online, estos son los registros visuales que quedan.
       </p>
 
       {lightbox && (
@@ -219,10 +219,13 @@ export default function Dashboards() {
   const [showOthers, setShowOthers] = useState(false)
 
   const isSecondaryActive = SECONDARY_CHAINS.includes(activeChain)
-  const filtered = ANALYSES.filter((a) => a.chains.includes(activeChain))
+  const filtered = activeChain === 'Covalent'
+    ? ANALYSES.filter((a) => a.platform === 'Covalent')
+    : ANALYSES.filter((a) => a.chains.includes(activeChain))
 
   const counts = {}
   ANALYSES.forEach((a) => a.chains.forEach((c) => { counts[c] = (counts[c] || 0) + 1 }))
+  counts['Covalent'] = ANALYSES.filter((a) => a.platform === 'Covalent').length
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
@@ -241,7 +244,7 @@ export default function Dashboards() {
         <div className="mb-4 animate-fade-in">
           <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-5 sm:p-6">
             <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-3 font-semibold">
-              Blockchain Analytics · 2022–2024
+              Blockchain Analytics
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Entre 2022 y 2024 trabajé como analista independiente utilizando{' '}
@@ -263,7 +266,7 @@ export default function Dashboards() {
             <p className="text-sm text-muted-foreground leading-relaxed">
               Cada análisis lo compartía en Twitter: hilos explicando los hallazgos principales a las comunidades cripto.
               Con el tiempo, eso generó reconocimientos de proyectos y dejó un registro público de cuatro años de trabajo.
-              En 2025, Flipside migró a un modelo de IA y la plataforma dejó de existir. Lo que queda son estos tweets —{' '}
+              En 2025, Flipside migró a un modelo de IA y la plataforma dejó de existir. Lo que queda son estos tweets:{' '}
               <span className="text-foreground font-medium">más de 40 análisis</span> en{' '}
               <span className="text-foreground font-medium">13 redes blockchain</span>.
             </p>
@@ -289,7 +292,7 @@ export default function Dashboards() {
             className="group flex items-center gap-4 p-4 mb-3 bg-card/50 border border-border rounded-xl hover:border-primary/40 hover:bg-secondary/20 transition-all duration-200"
           >
             <img
-              src={`${import.meta.env.BASE_URL}avatar.jpg`}
+              src={`${import.meta.env.BASE_URL}avatar-twitter.jpg`}
               alt="@Popex404 en X / Twitter"
               className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-border shrink-0 object-cover"
             />
