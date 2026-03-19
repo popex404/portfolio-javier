@@ -89,31 +89,32 @@ export default function CV() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
 
-        {/* Nav */}
-        <div className="flex items-center justify-end mb-6 animate-fade-in gap-2">
-          <div className="flex flex-wrap justify-end gap-2">
-            <a
-              href={googleDocsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-2 min-h-[44px] text-sm font-medium rounded-md border border-border hover:bg-accent/10 hover:border-primary/50 transition-all duration-200"
-            >
-              <FileText className="w-4 h-4" />
-              Ver CV
-            </a>
-            <a
-              href={pdfUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-2 min-h-[44px] text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-transform"
-            >
-              <Download className="w-4 h-4" />
-              <span className="hidden sm:inline">Descargar </span>PDF
-            </a>
-          </div>
+      {/* Sticky action bar */}
+      <div className="sticky top-12 z-30 bg-background/90 backdrop-blur-md border-b border-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-2 flex justify-end gap-2">
+          <a
+            href={googleDocsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-2 min-h-[44px] text-sm font-medium rounded-md border border-border hover:bg-accent/10 hover:border-primary/50 transition-all duration-200"
+          >
+            <FileText className="w-4 h-4" />
+            Ver CV
+          </a>
+          <a
+            href={pdfUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-2 min-h-[44px] text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-transform"
+          >
+            <Download className="w-4 h-4" />
+            <span className="hidden sm:inline">Descargar </span>PDF
+          </a>
         </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
 
         {/* Info card */}
         <div className="bg-card border border-border rounded-lg px-6 py-4 mb-6 animate-fade-in flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">

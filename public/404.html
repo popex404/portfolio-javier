@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <script>
     var l = window.location;
-    l.replace(l.protocol + '//' + l.host + l.pathname.split('/').slice(0, 2).join('/') + '/?/' + l.pathname.slice(1) + l.search + l.hash);
+    var base = l.pathname.split('/').slice(0, 2).join('/');
+    var rest = l.pathname.slice(1).split('/').slice(1).join('/');
+    l.replace(l.protocol + '//' + l.host + base + '/?/' + rest + l.search + l.hash);
   </script>
 </head>
 </html>
