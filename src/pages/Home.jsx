@@ -28,7 +28,7 @@ const projects = [
     linkText: '@Popex404 en X',
   },
   {
-    title: 'A&C-FA',
+    title: 'A&C',
     role: 'Web Developer',
     description: 'Landing page para A&C Soluciones Agrícolas y Urbanas, empresa de control de plagas certificada SEREMI en Valparaíso. Mobile-first con framework Hormozi, sello de garantía y SEO local.',
     tech: ['HTML', 'CSS', 'JavaScript', 'SEO'],
@@ -58,7 +58,6 @@ const projects = [
     role: 'Data Analyst',
     description: 'Dashboards interactivos desarrollados con Power BI durante el curso de Daxus Latam. Reportes con visualizaciones de métricas de negocio y análisis de datos.',
     tech: ['Power BI', 'DAX', 'Data Visualization'],
-    impact: 'Curso Daxus Latam',
     link: 'https://github.com/popex404/PowerBI-Dashboards',
     linkText: 'popex404/PowerBI-Dashboards',
   },
@@ -175,7 +174,7 @@ export default function Home() {
                   Analista de datos con base en Computer Science. Me especialicé en análisis de macrodatos de blockchain durante 4 años, siendo top analista en Flipside Crypto. Aprendo rápido, adopto herramientas nuevas y soy obsesivo con los detalles.
                 </p>
                 <p className="text-muted-foreground">
-                  Me gusta aprender a usar nuevas herramientas y potenciar mi capacidad para poder hacer lo que pienso sin problemas. Inglés C1. Trabajo remoto desde Valparaíso, Chile.
+                  Me gusta aprender a usar nuevas herramientas y potenciar mi capacidad para poder hacer lo que pienso sin problemas.
                 </p>
               </div>
             </section>
@@ -267,7 +266,7 @@ export default function Home() {
                 Background
               </h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Computer Science. Especializado en análisis de datos, blockchain y automatización. Experiencia en gestión de proyectos (Scrum, Kanban), herramientas Google y Microsoft. Inglés C1. Trabajo 100% remoto desde Chile.
+                Computer Science. Especializado en análisis de datos, blockchain y automatización. Experiencia en gestión de proyectos (Scrum, Kanban), herramientas Google y Microsoft. Inglés C1 certificado (EF SET). Trabajo 100% remoto desde Chile.
               </p>
             </section>
 

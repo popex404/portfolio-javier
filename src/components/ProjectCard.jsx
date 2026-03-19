@@ -1,4 +1,4 @@
-export default function ProjectCard({ title, role, description, tech = [], impact, link, linkText }) {
+export default function ProjectCard({ title, role, description, tech = [], impact, link, linkText, repos = [] }) {
   return (
     <div className="group mb-6 last:mb-0 p-4 rounded-lg hover:bg-secondary/30 transition-all duration-300 hover:translate-x-1">
       <div className="flex items-start justify-between gap-2">
@@ -31,7 +31,23 @@ export default function ProjectCard({ title, role, description, tech = [], impac
         </div>
       )}
 
-      {link && (
+      {repos.length > 0 && (
+        <div className="flex flex-col gap-1 mt-2">
+          {repos.map((r) => (
+            <a
+              key={r.url}
+              href={r.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary hover:underline inline-block"
+            >
+              {r.label}
+            </a>
+          ))}
+        </div>
+      )}
+
+      {link && repos.length === 0 && (
         <a
           href={link}
           target="_blank"
