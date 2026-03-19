@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowLeft, Download, Mail, MapPin, Github, ExternalLink, Twitter } from 'lucide-react'
+import { ArrowLeft, Download, FileText, Mail, MapPin, Github, ExternalLink, Twitter } from 'lucide-react'
 
 const experience = [
   {
@@ -83,31 +83,54 @@ function SectionTitle({ children }) {
   )
 }
 
-export default function CV() {
-  const pdfUrl = 'https://docs.google.com/document/d/1ev4FiZ4OdNqwHGf1pMAtxq6utbrNKhM0/export?format=pdf'
+export default function CVDigital() {
+  const googleDocsUrl = 'https://drive.google.com/file/d/1mAlIksGz3oTgTRAeDdt7E0D1AWCZ6TwL/view?usp=sharing'
+  const pdfUrl = 'https://drive.google.com/uc?export=download&id=1mAlIksGz3oTgTRAeDdt7E0D1AWCZ6TwL'
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
 
         {/* Nav */}
-        <div className="flex items-center justify-between mb-8 animate-fade-in">
+        <div className="flex items-center justify-between mb-6 animate-fade-in">
           <Link
-            to="/"
+            to="/cv"
             className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Volver
           </Link>
-          <a
-            href={pdfUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-transform"
-          >
-            <Download className="w-4 h-4" />
-            Descargar PDF
-          </a>
+          <div className="flex gap-2">
+            <a
+              href={googleDocsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md border border-border hover:bg-accent/10 hover:border-primary/50 transition-all duration-200"
+            >
+              <FileText className="w-4 h-4" />
+              Ver CV
+            </a>
+            <a
+              href={pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-transform"
+            >
+              <Download className="w-4 h-4" />
+              Descargar PDF
+            </a>
+          </div>
+        </div>
+
+        {/* Info card */}
+        <div className="bg-card border border-border rounded-lg px-6 py-4 mb-6 animate-fade-in flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <div>
+            <h2 className="text-lg font-semibold text-foreground">Javier García</h2>
+            <p className="text-sm text-muted-foreground">Analista de Datos · Blockchain & SQL · Computer Science</p>
+          </div>
+          <p className="text-xs text-muted-foreground sm:text-right max-w-xs">
+            Haz clic en "Ver CV" para abrir en Google Drive o "Descargar PDF" para guardar una copia.
+          </p>
         </div>
 
         {/* CV Card */}

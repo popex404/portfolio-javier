@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Mail, MapPin, FileText, ExternalLink, Github, Twitter, Send } from 'lucide-react'
+import { Mail, MapPin, FileText, ExternalLink, Github, Twitter, Linkedin } from 'lucide-react'
 import ProjectCard from '../components/ProjectCard'
 import SkillBadge from '../components/SkillBadge'
 
@@ -12,28 +12,55 @@ const projects = [
   {
     title: 'ChurnInsight',
     role: 'Data Scientist',
-    description: 'Modelos de ML para predicción de churn en hackathon Alura LATAM + No Country (126h). Construí y evalué múltiples modelos de predicción, seleccionando el de mejor rendimiento para un equipo que completó la entrega exitosamente.',
-    tech: ['Python', 'Machine Learning', 'Google Colab', 'GitHub'],
-    impact: 'Hackathon Prevención de Churn · Dic 2025 – Ene 2026',
-    link: 'https://github.com/popex404',
-    linkText: 'github.com/popex404',
+    description: 'Solución end-to-end de predicción de churn en equipo de 9 personas. Construí y evalué modelos de ML (Random Forest, KNN, Regresión Logística) sobre 357K registros, ingeniería de 48 features y segmentación de clientes con K-means.',
+    tech: ['Python', 'scikit-learn', 'FastAPI', 'Docker', 'MySQL'],
+    impact: 'Hackathon No Country · Dic 2025 – Ene 2026',
+    link: 'https://github.com/ChurnGuard/ChurnInsight',
+    linkText: 'ChurnGuard/ChurnInsight',
   },
   {
     title: 'Blockchain Analytics',
     role: 'Data Analyst',
-    description: 'Dashboards interactivos con métricas clave para proyectos blockchain. Análisis de macrodatos on-chain con SQL en Flipside Crypto y CovalentHQ (2021–2025).',
-    tech: ['SQL', 'Blockchain', 'Tableau', 'BigQuery', 'Snowflake'],
+    description: 'Dashboards interactivos y análisis on-chain en Flipside Crypto y CovalentHQ. Métricas clave para proyectos blockchain y reportes accesibles para audiencias diversas. Insights publicados en Twitter.',
+    tech: ['SQL', 'Blockchain', 'Tableau', 'Flipside Crypto', 'CovalentHQ'],
     impact: 'Top analista Flipside Crypto · Data Alchemist CovalentHQ · 2021–2025',
+    link: 'https://x.com/Popex404',
+    linkText: '@Popex404 en X',
+  },
+  {
+    title: 'A&C-FA',
+    role: 'Web Developer',
+    description: 'Landing page para A&C Soluciones Agrícolas y Urbanas, empresa de control de plagas certificada SEREMI en Valparaíso. Mobile-first con framework Hormozi, sello de garantía y SEO local.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'SEO'],
+    link: 'https://popex404.github.io/fa-ac-demos/',
+    linkText: 'Ver demos',
+  },
+  {
+    title: 'Gabriela Mistral en el Mundo',
+    role: 'Data Visualization',
+    description: 'Mapa interactivo que recorre los lugares visitados por Gabriela Mistral: comunidades escolares, consulados y visitas ilustres. Datos procesados con Python y pandas, visualizados con Folium y publicados en GitHub Pages.',
+    tech: ['Python', 'pandas', 'Folium', 'Google Colab'],
+    impact: 'Colaboración con Gabriela Rivera',
+    link: 'https://github.com/popex404/Gabriela-Mistral-en-el-Mundo',
+    linkText: 'popex404/Gabriela-Mistral-en-el-Mundo',
+  },
+  {
+    title: 'Alura Latam ONE',
+    role: 'Data Scientist',
+    description: 'Serie de desafíos del programa Oracle Next Education: juego de números secretos, amigo secreto, análisis de rentabilidad de tiendas, predicción de churn Telecom X y proyecto de base de datos MySQL. Cada desafío cubre un dominio distinto.',
+    tech: ['Python', 'Jupyter', 'SQL', 'MySQL', 'JavaScript'],
+    impact: 'Oracle Next Education · Alura Latam',
     link: 'https://github.com/popex404',
     linkText: 'github.com/popex404',
   },
   {
-    title: 'Proyecto IC-FA',
-    role: 'Web Developer',
-    description: 'Landing page para A&C, empresa de control de plagas certificada SEREMI en Valparaíso. Diseño mobile-first con framework Hormozi, sello de garantía y SEO local.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'SEO'],
-    link: 'https://github.com/popex404',
-    linkText: 'github.com/popex404',
+    title: 'Power BI Dashboards',
+    role: 'Data Analyst',
+    description: 'Dashboards interactivos desarrollados con Power BI durante el curso de Daxus Latam. Reportes con visualizaciones de métricas de negocio y análisis de datos.',
+    tech: ['Power BI', 'DAX', 'Data Visualization'],
+    impact: 'Curso Daxus Latam',
+    link: 'https://github.com/popex404/PowerBI-Dashboards',
+    linkText: 'popex404/PowerBI-Dashboards',
   },
 ]
 
@@ -145,10 +172,10 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-sm sm:text-base leading-relaxed">
                 <p className="text-foreground">
-                  Analista de datos con base en Computer Science. Me especialicé en análisis de macrodatos de blockchain durante 4 años — fui top analista en Flipside Crypto. Aprendo rápido, adopto herramientas nuevas y soy obsesivo con los detalles.
+                  Analista de datos con base en Computer Science. Me especialicé en análisis de macrodatos de blockchain durante 4 años, siendo top analista en Flipside Crypto. Aprendo rápido, adopto herramientas nuevas y soy obsesivo con los detalles.
                 </p>
                 <p className="text-muted-foreground">
-                  Expando constantemente mi stack: de SQL y dashboards on-chain a Machine Learning, automatización con LLMs y desarrollo web. Inglés C1. Trabajo remoto desde Valparaíso, Chile.
+                  Me gusta aprender a usar nuevas herramientas y potenciar mi capacidad para poder hacer lo que pienso sin problemas. Inglés C1. Trabajo remoto desde Valparaíso, Chile.
                 </p>
               </div>
             </section>
@@ -208,7 +235,7 @@ export default function Home() {
                   className="text-primary hover:underline flex items-center gap-2"
                 >
                   <Github className="w-4 h-4" />
-                  popex404
+                  <span>GitHub <span className="text-muted-foreground font-normal">· popex404</span></span>
                 </a>
                 <a
                   href="https://x.com/Popex404"
@@ -217,7 +244,7 @@ export default function Home() {
                   className="text-primary hover:underline flex items-center gap-2"
                 >
                   <Twitter className="w-4 h-4" />
-                  @Popex404
+                  <span>X / Twitter <span className="text-muted-foreground font-normal">· @Popex404</span></span>
                 </a>
                 <a
                   href="https://linkedin.com/in/javier-garcia-popex404/"
@@ -225,8 +252,8 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-primary hover:underline flex items-center gap-2"
                 >
-                  <ExternalLink className="w-4 h-4" />
-                  LinkedIn
+                  <Linkedin className="w-4 h-4" />
+                  <span>LinkedIn</span>
                 </a>
               </div>
             </section>
@@ -266,7 +293,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Hecho por Javier García — Para colaboraciones o proyectos, escríbeme a{' '}
+            Hecho por Javier García. Para colaboraciones o proyectos, escríbeme a{' '}
             <a href="mailto:javiergarciapinilla95@gmail.com" className="text-primary hover:underline">
               javiergarciapinilla95@gmail.com
             </a>
