@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowLeft, Download, FileText, Mail, MapPin, Github, ExternalLink, Twitter, Phone } from 'lucide-react'
+import { Download, FileText, Mail, MapPin, Github, ExternalLink, Twitter, Phone } from 'lucide-react'
 
 const experience = [
   {
@@ -92,14 +92,7 @@ export default function CV() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
 
         {/* Nav */}
-        <div className="flex items-center justify-between mb-6 animate-fade-in gap-2">
-          <Link
-            to="/"
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors shrink-0"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Volver
-          </Link>
+        <div className="flex items-center justify-end mb-6 animate-fade-in gap-2">
           <div className="flex flex-wrap justify-end gap-2">
             <a
               href={googleDocsUrl}
@@ -142,7 +135,7 @@ export default function CV() {
               Javier García Pinilla
             </h1>
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 text-sm text-muted-foreground mt-3">
-              <a href="tel:+56968748182" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+              <a href="tel:+56967481782" className="flex items-center gap-1.5 hover:text-primary transition-colors">
                 <Phone className="w-3.5 h-3.5 shrink-0" />
                 +56 9 6748 1782
               </a>

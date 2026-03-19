@@ -183,6 +183,23 @@ export default function Home() {
               </div>
             </section>
 
+            {/* Proof of Work — mobile only, appears after About and before Projects */}
+            <section
+              className="lg:hidden bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-fade-in"
+              style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
+            >
+              <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
+                Proof of Work
+              </h2>
+              <div className="space-y-2 text-sm text-muted-foreground leading-relaxed">
+                <p>🏆 Top analista · <span className="text-primary">Flipside Crypto</span></p>
+                <p>🧪 Data Alchemist · <span className="text-primary">CovalentHQ</span></p>
+                <p>🧙‍♂️ Sensei · <span className="text-primary">Struct Finance (Avalanche)</span></p>
+                <p>🔥 Ambassador · <span className="text-primary">BlazeStake (Solana)</span></p>
+                <p>🎯 Hackathon Churn · <span className="text-primary">Alura Latam + No Country</span></p>
+              </div>
+            </section>
+
             {/* Featured Work */}
             <section
               className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 sm:p-8 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-fade-in"
@@ -267,9 +284,9 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Proof of Work */}
+            {/* Proof of Work — desktop only (mobile version is in main content above) */}
             <section
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
+              className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">

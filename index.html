@@ -2,10 +2,10 @@
 <html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javier García | Analista de Datos</title>
-    <meta name="description" content="Portfolio de Javier García — Analista de Datos · Blockchain & SQL · Computer Science. Valparaíso, Chile." />
+    <meta name="description" content="Portfolio de Javier García — Analista de Datos · Blockchain & SQL · Automatización & ETL. Valparaíso, Chile." />
     <meta name="author" content="Javier García" />
     <meta property="og:title" content="Javier García | Analista de Datos" />
     <meta property="og:description" content="Construyendo productos, herramientas y sistemas que generan resultados reales." />
@@ -13,6 +13,14 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) { return s.replace(/~and~/g, '&') }).join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      }(window.location))
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

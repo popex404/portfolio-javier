@@ -30,14 +30,14 @@ export default function ProjectCard({ title, role, description, tech = [], impac
       )}
 
       {repos.length > 0 && (
-        <div className="grid grid-cols-2 gap-1.5 mt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 mt-2">
           {repos.map((r) => (
             <a
               key={r.url}
               href={r.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-primary hover:underline inline-block"
+              className="text-sm text-primary hover:underline py-2 min-h-[44px] flex items-center"
             >
               {r.label}
             </a>

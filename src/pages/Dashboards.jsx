@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowLeft, ExternalLink, ChevronLeft, ChevronRight, Twitter, ChevronDown } from 'lucide-react'
+import { ExternalLink, ChevronLeft, ChevronRight, Twitter, ChevronDown } from 'lucide-react'
 import { ANALYSES, FULL_DASHBOARDS, SPECIALS, CHAIN_CONFIG, PLATFORM_CONFIG } from '../data/dashboardData'
 
 const PRIMARY_CHAINS = ['Solana', 'Avalanche', 'Ethereum', 'NEAR']
@@ -87,11 +87,21 @@ function DashboardCarousel() {
   const slides = FULL_DASHBOARDS.filter((d) => d.image)
   const [idx, setIdx] = useState(0)
   const [lightbox, setLightbox] = useState(false)
+  const [touchStart, setTouchStart] = useState(null)
   if (!slides.length) return null
 
   const current = slides[idx]
   const prev = () => setIdx((i) => (i - 1 + slides.length) % slides.length)
   const next = () => setIdx((i) => (i + 1) % slides.length)
+
+  const handleTouchStart = (e) => setTouchStart(e.touches[0].clientX)
+  const handleTouchEnd = (e) => {
+    if (touchStart === null) return
+    const diff = touchStart - e.changedTouches[0].clientX
+    if (diff > 50) next()
+    else if (diff < -50) prev()
+    setTouchStart(null)
+  }
 
   return (
     <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl">
@@ -109,6 +119,8 @@ function DashboardCarousel() {
       <div className="relative">
         <button
           onClick={() => setLightbox(true)}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
           className="block w-full overflow-hidden rounded-lg border border-border hover:border-primary/40 transition-all duration-200 group text-left"
         >
           <div className="relative h-52 sm:h-72 lg:h-96 bg-[#0a0a0a] overflow-hidden flex items-start justify-center">
@@ -169,13 +181,18 @@ function DashboardCarousel() {
         </a>
       </div>
 
-      <div className="flex justify-center gap-1.5 mt-4">
+      <div className="flex justify-center gap-0 mt-4">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => setIdx(i)}
-            className={`h-1.5 rounded-full transition-all duration-200 ${i === idx ? 'bg-primary w-3' : 'bg-border hover:bg-muted-foreground w-1.5'}`}
-          />
+            aria-label={`Ir a imagen ${i + 1}`}
+            className="flex items-center justify-center min-w-[44px] min-h-[44px]"
+          >
+            <span
+              className={`block h-1.5 rounded-full transition-all duration-200 ${i === idx ? 'bg-primary w-3' : 'bg-border hover:bg-muted-foreground w-1.5'}`}
+            />
+          </button>
         ))}
       </div>
     </div>
@@ -195,20 +212,8 @@ export default function Dashboards() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
 
-      {/* All content in max-w-4xl */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12">
-        {/* Back nav */}
-        <Link
-          to="/"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-6"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Volver al inicio
-        </Link>
-      </div>
-
-      {/* Rest of content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12">
+      {/* Content */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-8 sm:pb-12">
 
         {/* Header */}
         <div className="mb-8 animate-fade-in">
