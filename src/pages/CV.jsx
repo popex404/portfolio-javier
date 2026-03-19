@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 import { ArrowLeft, FileText, Download, Monitor } from 'lucide-react'
 
 export default function CV() {
-  const googleDocsUrl = 'https://docs.google.com/document/d/1ev4FiZ4OdNqwHGf1pMAtxq6utbrNKhM0/edit?usp=sharing'
-  const pdfUrl = 'https://docs.google.com/document/d/1ev4FiZ4OdNqwHGf1pMAtxq6utbrNKhM0/export?format=pdf'
+  const googleDocsUrl = 'https://drive.google.com/file/d/1mAlIksGz3oTgTRAeDdt7E0D1AWCZ6TwL/view?usp=sharing'
+  const pdfUrl = 'https://drive.google.com/uc?export=download&id=1mAlIksGz3oTgTRAeDdt7E0D1AWCZ6TwL'
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
