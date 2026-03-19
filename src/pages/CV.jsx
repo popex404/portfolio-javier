@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 import { ArrowLeft, FileText, Download } from 'lucide-react'
 
 export default function CV() {
-  const googleDocsUrl = 'https://docs.google.com/document/d/TU_ID_AQUI/edit?usp=sharing'
-  const pdfUrl = 'https://docs.google.com/document/d/TU_ID_AQUI/export?format=pdf'
+  const googleDocsUrl = 'https://docs.google.com/document/d/1ev4FiZ4OdNqwHGf1pMAtxq6utbrNKhM0/edit?usp=sharing'
+  const pdfUrl = 'https://docs.google.com/document/d/1ev4FiZ4OdNqwHGf1pMAtxq6utbrNKhM0/export?format=pdf'
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
@@ -22,7 +22,7 @@ export default function CV() {
           <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
             Curriculum Vitae
           </h1>
-          <p className="text-muted-foreground">Full-Stack Developer · Data & Producto</p>
+          <p className="text-muted-foreground">Analista de Datos · Blockchain & SQL</p>
         </div>
 
         <div
@@ -32,7 +32,7 @@ export default function CV() {
           <div className="flex flex-col items-center gap-6">
             <div className="text-center">
               <h2 className="text-2xl font-semibold mb-2">Javier García</h2>
-              <p className="text-muted-foreground">Ingeniería Civil Informática | Full-Stack Dev | Data</p>
+              <p className="text-muted-foreground">Analista de Datos · Blockchain & SQL · Computer Science</p>
             </div>
 
             <p className="text-sm text-muted-foreground text-center max-w-md">
