@@ -92,20 +92,20 @@ export default function CV() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
 
         {/* Nav */}
-        <div className="flex items-center justify-between mb-6 animate-fade-in">
+        <div className="flex items-center justify-between mb-6 animate-fade-in gap-2">
           <Link
             to="/"
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors shrink-0"
           >
             <ArrowLeft className="w-4 h-4" />
             Volver
           </Link>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap justify-end gap-2">
             <a
               href={googleDocsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md border border-border hover:bg-accent/10 hover:border-primary/50 transition-all duration-200"
+              className="inline-flex items-center gap-1.5 px-3 py-2 min-h-[44px] text-sm font-medium rounded-md border border-border hover:bg-accent/10 hover:border-primary/50 transition-all duration-200"
             >
               <FileText className="w-4 h-4" />
               Ver CV
@@ -114,10 +114,10 @@ export default function CV() {
               href={pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-transform"
+              className="inline-flex items-center gap-1.5 px-3 py-2 min-h-[44px] text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-transform"
             >
               <Download className="w-4 h-4" />
-              Descargar PDF
+              <span className="hidden sm:inline">Descargar </span>PDF
             </a>
           </div>
         </div>
@@ -137,13 +137,13 @@ export default function CV() {
         <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl shadow-xl animate-fade-in">
 
           {/* Header */}
-          <div className="px-8 pt-8 pb-6 border-b border-border text-center">
+          <div className="px-4 sm:px-8 pt-6 sm:pt-8 pb-6 border-b border-border text-center">
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-1">
               Javier García Pinilla
             </h1>
-            <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm text-muted-foreground mt-3">
-              <a href="mailto:javiergarciapinilla95@gmail.com" className="flex items-center gap-1.5 hover:text-primary transition-colors">
-                <Mail className="w-3.5 h-3.5" />
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 text-sm text-muted-foreground mt-3">
+              <a href="mailto:javiergarciapinilla95@gmail.com" className="flex items-center gap-1.5 hover:text-primary transition-colors break-all">
+                <Mail className="w-3.5 h-3.5 shrink-0" />
                 javiergarciapinilla95@gmail.com
               </a>
               <span className="flex items-center gap-1.5">
@@ -165,7 +165,7 @@ export default function CV() {
             </div>
           </div>
 
-          <div className="px-8 py-6 space-y-7">
+          <div className="px-4 sm:px-8 py-5 sm:py-6 space-y-7">
 
             {/* Intro */}
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
@@ -243,8 +243,8 @@ export default function CV() {
               <SectionTitle>Habilidades</SectionTitle>
               <div className="space-y-2">
                 {Object.entries(skills).map(([label, value]) => (
-                  <div key={label} className="flex gap-3 text-sm">
-                    <span className="font-semibold text-foreground w-28 shrink-0">{label}</span>
+                  <div key={label} className="flex flex-col sm:flex-row gap-0.5 sm:gap-3 text-sm">
+                    <span className="font-semibold text-foreground sm:w-28 sm:shrink-0">{label}</span>
                     <span className="text-muted-foreground leading-relaxed">{value}</span>
                   </div>
                 ))}

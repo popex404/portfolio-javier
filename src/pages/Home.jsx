@@ -90,7 +90,7 @@ export default function Home() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
 
         {/* Hero */}
-        <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start mb-8 sm:mb-12 animate-fade-in">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-start mb-8 sm:mb-12 animate-fade-in">
           {/* Avatar */}
           <div className="relative group shrink-0">
             <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl object-cover border-2 border-primary/20 shadow-lg transition-all duration-500 group-hover:border-primary/50 group-hover:shadow-2xl group-hover:shadow-primary/20 bg-secondary flex items-center justify-center overflow-hidden">
@@ -125,11 +125,11 @@ export default function Home() {
               Construyendo productos, herramientas y sistemas que generan resultados reales.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-4">
+            <div className="flex flex-wrap gap-3 mb-4">
               {contacts.map(({ icon: Icon, label }) => (
-                <div key={label} className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                  <Icon className="w-4 h-4 text-primary" />
-                  <span>{label}</span>
+                <div key={label} className="flex items-center gap-1.5 text-sm text-muted-foreground min-w-0">
+                  <Icon className="w-4 h-4 text-primary shrink-0" />
+                  <span className="break-all">{label}</span>
                 </div>
               ))}
             </div>
@@ -137,14 +137,14 @@ export default function Home() {
             <div className="flex flex-wrap gap-2 items-center">
               <Link
                 to="/cv"
-                className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-border bg-transparent hover:bg-accent/10 hover:border-primary/50 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-3 py-2 min-h-[44px] text-sm font-medium rounded-md border border-border bg-transparent hover:bg-accent/10 hover:border-primary/50 transition-all duration-200"
               >
                 <FileText className="w-4 h-4" />
                 Ver CV
               </Link>
               <a
                 href="mailto:javiergarciapinilla95@gmail.com"
-                className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-transform"
+                className="inline-flex items-center gap-2 px-3 py-2 min-h-[44px] text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-transform"
               >
                 <Mail className="w-4 h-4" />
                 Contactar
@@ -153,7 +153,7 @@ export default function Home() {
                 href="https://github.com/popex404"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-border bg-transparent hover:bg-accent/10 hover:border-primary/50 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-3 py-2 min-h-[44px] text-sm font-medium rounded-md border border-border bg-transparent hover:bg-accent/10 hover:border-primary/50 transition-all duration-200"
               >
                 <Github className="w-4 h-4" />
                 GitHub
@@ -219,7 +219,7 @@ export default function Home() {
 
             {/* Contact */}
             <section
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
+              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
@@ -228,10 +228,10 @@ export default function Home() {
               <div className="space-y-3 text-sm">
                 <a
                   href="mailto:javiergarciapinilla95@gmail.com"
-                  className="text-primary hover:underline flex items-center gap-2"
+                  className="text-primary hover:underline flex items-center gap-2 min-w-0"
                 >
-                  <Mail className="w-4 h-4" />
-                  javiergarciapinilla95@gmail.com
+                  <Mail className="w-4 h-4 shrink-0" />
+                  <span className="break-all">javiergarciapinilla95@gmail.com</span>
                 </a>
                 <a
                   href="https://github.com/popex404"
@@ -239,7 +239,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-primary hover:underline flex items-center gap-2"
                 >
-                  <Github className="w-4 h-4" />
+                  <Github className="w-4 h-4 shrink-0" />
                   <span>GitHub <span className="text-muted-foreground font-normal">· popex404</span></span>
                 </a>
                 <a
@@ -248,7 +248,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-primary hover:underline flex items-center gap-2"
                 >
-                  <Twitter className="w-4 h-4" />
+                  <Twitter className="w-4 h-4 shrink-0" />
                   <span>X / Twitter <span className="text-muted-foreground font-normal">· @Popex404</span></span>
                 </a>
                 <a
@@ -257,7 +257,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-primary hover:underline flex items-center gap-2"
                 >
-                  <Linkedin className="w-4 h-4" />
+                  <Linkedin className="w-4 h-4 shrink-0" />
                   <span>LinkedIn</span>
                 </a>
               </div>
@@ -265,7 +265,7 @@ export default function Home() {
 
             {/* Background */}
             <section
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
+              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
@@ -278,7 +278,7 @@ export default function Home() {
 
             {/* Proof of Work */}
             <section
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
+              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
