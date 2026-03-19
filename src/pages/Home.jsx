@@ -63,7 +63,7 @@ export default function Home() {
           <div className="relative group shrink-0">
             <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl object-cover border-2 border-primary/20 shadow-lg transition-all duration-500 group-hover:border-primary/50 group-hover:shadow-2xl group-hover:shadow-primary/20 bg-secondary flex items-center justify-center overflow-hidden">
               <img
-                src="/avatar.jpg"
+                src={`${import.meta.env.BASE_URL}avatar.jpg`}
                 alt="Javier García"
                 className="w-full h-full object-cover"
                 onError={(e) => {

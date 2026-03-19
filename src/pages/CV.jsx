@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowLeft, FileText, Download } from 'lucide-react'
+import { ArrowLeft, FileText, Download, Monitor } from 'lucide-react'
 
 export default function CV() {
   const googleDocsUrl = 'https://docs.google.com/document/d/1ev4FiZ4OdNqwHGf1pMAtxq6utbrNKhM0/edit?usp=sharing'
@@ -58,6 +58,17 @@ export default function CV() {
                 <Download className="w-4 h-4" />
                 Descargar PDF
               </a>
+            </div>
+
+            <div className="w-full border-t border-border pt-4">
+              <p className="text-xs text-muted-foreground text-center mb-3">También disponible como versión web interactiva</p>
+              <Link
+                to="/cv-digital"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium rounded-md border border-primary/40 text-primary hover:bg-primary/10 hover:border-primary transition-all duration-200"
+              >
+                <Monitor className="w-4 h-4" />
+                Ver CV Digital
+              </Link>
             </div>
           </div>
         </div>
