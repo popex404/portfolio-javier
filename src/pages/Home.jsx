@@ -47,11 +47,17 @@ const projects = [
   {
     title: 'Alura Latam ONE',
     role: 'Data Scientist',
-    description: 'Serie de desafíos del programa Oracle Next Education: juego de números secretos, amigo secreto, análisis de rentabilidad de tiendas, predicción de churn Telecom X y proyecto de base de datos MySQL. Cada desafío cubre un dominio distinto.',
+    description: 'Serie de desafíos del programa Oracle Next Education. Cada desafío cubre un dominio distinto.',
     tech: ['Python', 'Jupyter', 'SQL', 'MySQL', 'JavaScript'],
     impact: 'Oracle Next Education · Alura Latam',
-    link: 'https://github.com/popex404',
-    linkText: 'github.com/popex404',
+    repos: [
+      { label: 'Juego de números secretos', url: 'https://github.com/popex404/juego-secreto' },
+      { label: 'Amigo secreto', url: 'https://github.com/popex404/amigo-secreto' },
+      { label: 'Análisis de rentabilidad (AluraShop)', url: 'https://github.com/popex404/challenge-AluraShop' },
+      { label: 'Predicción de churn Telecom X — parte 1', url: 'https://github.com/popex404/Desafio-Telecom-X' },
+      { label: 'Predicción de churn Telecom X — parte 2', url: 'https://github.com/popex404/Desafio-Telecom-X-parte2' },
+      { label: 'Base de datos MySQL', url: 'https://github.com/popex404/empresa-sql-project' },
+    ],
   },
   {
     title: 'Power BI Dashboards',
