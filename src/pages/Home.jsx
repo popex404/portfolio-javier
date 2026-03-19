@@ -21,9 +21,9 @@ const projects = [
   {
     title: 'Blockchain Analytics',
     role: 'Data Analyst',
-    description: 'Dashboards interactivos con métricas clave para proyectos blockchain. Análisis de macrodatos on-chain con SQL en plataformas como Flipside Crypto y CovalentHQ.',
+    description: 'Dashboards interactivos con métricas clave para proyectos blockchain. Análisis de macrodatos on-chain con SQL en Flipside Crypto y CovalentHQ (2021–2025).',
     tech: ['SQL', 'Blockchain', 'Tableau', 'BigQuery', 'Snowflake'],
-    impact: 'Top analista Flipside Crypto · Data Alchemist CovalentHQ',
+    impact: 'Top analista Flipside Crypto · Data Alchemist CovalentHQ · 2021–2025',
     link: 'https://github.com/popex404',
     linkText: 'github.com/popex404',
   },
