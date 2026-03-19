@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowLeft, Download, FileText, Mail, MapPin, Github, ExternalLink, Twitter } from 'lucide-react'
+import { ArrowLeft, Download, FileText, Mail, MapPin, Github, ExternalLink, Twitter, Phone } from 'lucide-react'
 
 const experience = [
   {
@@ -142,6 +142,10 @@ export default function CV() {
               Javier García Pinilla
             </h1>
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 text-sm text-muted-foreground mt-3">
+              <a href="tel:+56968748182" className="flex items-center gap-1.5 hover:text-primary transition-colors">
+                <Phone className="w-3.5 h-3.5 shrink-0" />
+                +56 9 6748 1782
+              </a>
               <a href="mailto:javiergarciapinilla95@gmail.com" className="flex items-center gap-1.5 hover:text-primary transition-colors break-all">
                 <Mail className="w-3.5 h-3.5 shrink-0" />
                 javiergarciapinilla95@gmail.com
@@ -169,7 +173,11 @@ export default function CV() {
 
             {/* Intro */}
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              Analista de datos con formación en Ingeniería Civil en Ciencias de la Computación, Universidad de Chile. Top Analista en Flipside Crypto con 40+ análisis publicados en 13 redes blockchain durante 4 años de trabajo en comunidades angloparlantes. El mismo rigor analítico aplicado a machine learning y análisis de negocio: predicción de churn sobre 357K registros con ingeniería de 48 features (Hackathon Alura Latam + No Country, 2025). Inglés C1. Trabajo 100% remoto desde Valparaíso, Chile.
+              Analista de datos con formación en Ingeniería Civil en Ciencias de la Computación,
+              Universidad de Chile. Top Analista en Flipside Crypto y Data Alchemist en CovalentHQ,
+              con experiencia en análisis on-chain en múltiples redes blockchain para comunidades
+              angloparlantes. El mismo rigor aplicado a machine learning y automatización de datos.
+              Inglés C1. Trabajo 100% remoto desde Valparaíso, Chile.
             </p>
 
             {/* Experiencia */}
@@ -250,9 +258,7 @@ export default function CV() {
           </div>
         </div>
 
-        <p className="text-center text-xs text-muted-foreground mt-6 mb-4">
-          +56 9 6748 1782 · Valparaíso, Chile
-        </p>
+
       </div>
     </div>
   )
