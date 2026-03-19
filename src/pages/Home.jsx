@@ -12,8 +12,8 @@ const projects = [
   {
     title: 'ChurnInsight',
     role: 'Data Scientist',
-    description: 'Modelo de predicción de churn desarrollado en Hackathon Alura Latam + No Country (126h). Análisis de cohortes, métricas de retención y predicción de abandono por segmento.',
-    tech: ['Python', 'Machine Learning', 'Data Analysis', 'SQL'],
+    description: 'Modelos de ML para predicción de churn en hackathon Alura LATAM + No Country (126h). Construí y evalué múltiples modelos de predicción, seleccionando el de mejor rendimiento para un equipo que completó la entrega exitosamente.',
+    tech: ['Python', 'Machine Learning', 'Google Colab', 'GitHub'],
     impact: 'Hackathon Prevención de Churn · Dic 2025 – Ene 2026',
     link: 'https://github.com/popex404',
     linkText: 'github.com/popex404',
@@ -28,9 +28,9 @@ const projects = [
     linkText: 'github.com/popex404',
   },
   {
-    title: 'FA-control-plagas',
+    title: 'Proyecto IC-FA',
     role: 'Web Developer',
-    description: 'Sitio web de control de plagas certificado SEREMI para cliente en Valparaíso. Landing con framework Hormozi, sello de garantía y SEO local.',
+    description: 'Landing page para A&C, empresa de control de plagas certificada SEREMI en Valparaíso. Diseño mobile-first con framework Hormozi, sello de garantía y SEO local.',
     tech: ['HTML', 'CSS', 'JavaScript', 'SEO'],
     link: 'https://github.com/popex404',
     linkText: 'github.com/popex404',
@@ -40,16 +40,16 @@ const projects = [
 const skills = [
   'SQL',
   'Python',
-  'R',
+  'Data Analysis',
+  'JavaScript',
   'Blockchain',
   'Tableau',
   'Power BI',
   'BigQuery',
-  'Snowflake',
-  'ETL',
-  'Data Analysis',
-  'Google Workspace',
-  'Scrum',
+  'Git / GitHub',
+  'Machine Learning',
+  'Claude API / LLMs',
+  'R',
 ]
 
 export default function Home() {
@@ -145,10 +145,10 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-sm sm:text-base leading-relaxed">
                 <p className="text-foreground">
-                  Analista de datos con 4 años de experiencia en macrodatos de blockchains usando SQL. Construyo dashboards interactivos y sistemas de análisis que destacan métricas clave de rendimiento para múltiples proyectos.
+                  Analista de datos con base en Computer Science. Me especialicé en análisis de macrodatos de blockchain durante 4 años — fui top analista en Flipside Crypto. Aprendo rápido, adopto herramientas nuevas y soy obsesivo con los detalles.
                 </p>
                 <p className="text-muted-foreground">
-                  He sido top analista en Flipside Crypto, Data Alchemist en CovalentHQ y participado en proyectos DeFi en Avalanche y Solana. Nivel de inglés C1. Trabajo en remoto desde Chile.
+                  Expando constantemente mi stack: de SQL y dashboards on-chain a Machine Learning, automatización con LLMs y desarrollo web. Inglés C1. Trabajo remoto desde Valparaíso, Chile.
                 </p>
               </div>
             </section>
