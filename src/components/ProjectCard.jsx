@@ -1,4 +1,6 @@
-export default function ProjectCard({ title, role, description, tech = [], impact, link, linkText, repos = [] }) {
+import { Link } from 'react-router-dom'
+
+export default function ProjectCard({ title, role, description, tech = [], impact, link, linkTo, linkText, repos = [] }) {
   return (
     <div className="group mb-5 sm:mb-6 last:mb-0 p-3 sm:p-4 rounded-lg hover:bg-secondary/30 transition-all duration-300 hover:translate-x-1 overflow-hidden">
       <div className="flex items-start justify-between gap-2">
@@ -14,10 +16,6 @@ export default function ProjectCard({ title, role, description, tech = [], impac
 
       <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{description}</p>
 
-      {impact && (
-        <p className="text-sm text-primary font-semibold mt-2">{impact}</p>
-      )}
-
       {tech.length > 0 && (
         <div className="flex flex-wrap gap-1.5 mt-3">
           {tech.map((t) => (
@@ -32,7 +30,7 @@ export default function ProjectCard({ title, role, description, tech = [], impac
       )}
 
       {repos.length > 0 && (
-        <div className="flex flex-col gap-1 mt-2">
+        <div className="grid grid-cols-2 gap-1.5 mt-2">
           {repos.map((r) => (
             <a
               key={r.url}
@@ -47,7 +45,17 @@ export default function ProjectCard({ title, role, description, tech = [], impac
         </div>
       )}
 
-      {link && repos.length === 0 && (
+      {linkTo && repos.length === 0 && (
+        <Link
+          to={linkTo}
+          className="text-sm text-primary hover:underline mt-2 inline-block relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+        >
+          {linkText || linkTo}
+        </Link>
+      )}
+
+      {/* If both `link` and `linkTo` are provided, `linkTo` takes precedence and `link` is intentionally ignored. */}
+      {link && !linkTo && repos.length === 0 && (
         <a
           href={link}
           target="_blank"

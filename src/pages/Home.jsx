@@ -12,52 +12,18 @@ const projects = [
   {
     title: 'ChurnInsight',
     role: 'Data Scientist',
-    description: 'Solución end-to-end de predicción de churn en equipo de 9 personas. Construí y evalué modelos de ML (Random Forest, KNN, Regresión Logística) sobre 357K registros, ingeniería de 48 features y segmentación de clientes con K-means.',
+    description: 'Solución end-to-end de predicción de churn en equipo de 9 personas durante el hackathon Alura Latam + No Country (Dic 2025). Construí y evalué modelos de ML (Random Forest, KNN, Regresión Logística) sobre 357K registros, ingeniería de 48 features y segmentación de clientes con K-means.',
     tech: ['Python', 'scikit-learn', 'FastAPI', 'Docker', 'MySQL'],
-    impact: 'Hackathon No Country · Dic 2025 – Ene 2026',
     link: 'https://github.com/ChurnGuard/ChurnInsight',
-    linkText: 'ChurnGuard/ChurnInsight',
+    linkText: 'Ver Repositorio',
   },
   {
     title: 'Blockchain Analytics',
     role: 'Data Analyst',
-    description: 'Dashboards interactivos y análisis on-chain en Flipside Crypto y CovalentHQ. Métricas clave para proyectos blockchain y reportes accesibles para audiencias diversas. Insights publicados en Twitter.',
-    tech: ['SQL', 'Blockchain', 'Tableau', 'Flipside Crypto', 'CovalentHQ'],
-    impact: 'Top analista Flipside Crypto · Data Alchemist CovalentHQ · 2021–2025',
-    link: 'https://x.com/Popex404',
-    linkText: '@Popex404 en X',
-  },
-  {
-    title: 'A&C',
-    role: 'Web Developer',
-    description: 'Landing page para A&C Soluciones Agrícolas y Urbanas, empresa de control de plagas certificada SEREMI en Valparaíso. Mobile-first con framework Hormozi, sello de garantía y SEO local.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'SEO'],
-    link: 'https://popex404.github.io/fa-ac-demos/',
-    linkText: 'Ver demos',
-  },
-  {
-    title: 'Gabriela Mistral en el Mundo',
-    role: 'Data Visualization',
-    description: 'Mapa interactivo que recorre los lugares visitados por Gabriela Mistral: comunidades escolares, consulados y visitas ilustres. Datos procesados con Python y pandas, visualizados con Folium y publicados en GitHub Pages.',
-    tech: ['Python', 'pandas', 'Folium', 'Google Colab'],
-    impact: 'Colaboración con Gabriela Rivera',
-    link: 'https://github.com/popex404/Gabriela-Mistral-en-el-Mundo',
-    linkText: 'popex404/Gabriela-Mistral-en-el-Mundo',
-  },
-  {
-    title: 'Alura Latam ONE',
-    role: 'Data Scientist',
-    description: 'Serie de desafíos del programa Oracle Next Education. Cada desafío cubre un dominio distinto.',
-    tech: ['Python', 'Jupyter', 'SQL', 'MySQL', 'JavaScript'],
-    impact: 'Oracle Next Education · Alura Latam',
-    repos: [
-      { label: 'Juego de números secretos', url: 'https://github.com/popex404/juego-secreto' },
-      { label: 'Amigo secreto', url: 'https://github.com/popex404/amigo-secreto' },
-      { label: 'Análisis de rentabilidad (AluraShop)', url: 'https://github.com/popex404/challenge-AluraShop' },
-      { label: 'Predicción de churn Telecom X — parte 1', url: 'https://github.com/popex404/Desafio-Telecom-X' },
-      { label: 'Predicción de churn Telecom X — parte 2', url: 'https://github.com/popex404/Desafio-Telecom-X-parte2' },
-      { label: 'Base de datos MySQL', url: 'https://github.com/popex404/empresa-sql-project' },
-    ],
+    description: 'Dashboards interactivos y análisis on-chain en Flipside Crypto y CovalentHQ. Métricas clave para proyectos blockchain y reportes accesibles para audiencias diversas. Más de 40 análisis en 13 redes blockchain.',
+    tech: ['SQL', 'Blockchain', 'Tableau', 'Looker Studio', 'Flipside Crypto', 'CovalentHQ'],
+    linkTo: '/dashboards',
+    linkText: 'Ver dashboards',
   },
   {
     title: 'Power BI Dashboards',
@@ -65,23 +31,58 @@ const projects = [
     description: 'Dashboards interactivos desarrollados con Power BI durante el curso de Daxus Latam. Reportes con visualizaciones de métricas de negocio y análisis de datos.',
     tech: ['Power BI', 'DAX', 'Data Visualization'],
     link: 'https://github.com/popex404/PowerBI-Dashboards',
-    linkText: 'popex404/PowerBI-Dashboards',
+    linkText: 'Ver Dashboards',
+  },
+  {
+    title: 'A&C',
+    role: 'Web Developer',
+    description: 'Landing page para A&C Soluciones Agrícolas y Urbanas, empresa de control de plagas certificada SEREMI en Valparaíso.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'SEO'],
+    link: 'https://popex404.github.io/fa-ac-demos/',
+    linkText: 'Ver demos',
+  },
+  {
+    title: 'Gabriela Mistral en el Mundo',
+    role: 'Data Visualization',
+    description: 'Mapa interactivo que recorre los lugares visitados por Gabriela Mistral, diseñado en conjunto con Gabriela Rivera. Datos procesados con Python y pandas, visualizados con Folium y publicados en GitHub Pages.',
+    tech: ['Python', 'pandas', 'Folium', 'Google Colab'],
+    link: 'https://github.com/popex404/Gabriela-Mistral-en-el-Mundo',
+    linkText: 'Ver el mapa',
+  },
+  {
+    title: 'Alura Latam ONE',
+    role: 'Data Scientist',
+    description: 'Serie de desafíos del programa Oracle Next Education de Alura Latam. Cada desafío cubre un dominio distinto.',
+    tech: ['Python', 'Jupyter', 'SQL', 'MySQL', 'JavaScript'],
+    repos: [
+      { label: 'Juego de números secretos', url: 'https://github.com/popex404/juego-secreto' },
+      { label: 'Amigo secreto', url: 'https://github.com/popex404/amigo-secreto' },
+      { label: 'Análisis de rentabilidad (AluraShop)', url: 'https://github.com/popex404/challenge-AluraShop' },
+      { label: 'Predicción de churn Telecom X. parte 1', url: 'https://github.com/popex404/Desafio-Telecom-X' },
+      { label: 'Predicción de churn Telecom X. parte 2', url: 'https://github.com/popex404/Desafio-Telecom-X-parte2' },
+      { label: 'Base de datos MySQL', url: 'https://github.com/popex404/empresa-sql-project' },
+    ],
   },
 ]
 
 const skills = [
   'SQL',
   'Python',
-  'Data Analysis',
-  'JavaScript',
+  'R',
+  'Java',
   'Blockchain',
+  'On-chain Analytics',
+  'Web3 / DeFi',
   'Tableau',
   'Power BI',
   'BigQuery',
-  'Git / GitHub',
+  'Snowflake',
+  'ETL',
   'Machine Learning',
+  'Git / GitHub',
   'Claude API / LLMs',
-  'R',
+  'Agile / Scrum',
+  'Google Workspace',
 ]
 
 export default function Home() {
@@ -116,13 +117,10 @@ export default function Home() {
               Javier García
             </h1>
             <p className="text-lg sm:text-xl text-foreground font-semibold mb-1">
-              Analista de Datos · Blockchain & SQL
-            </p>
-            <p className="text-xs text-primary/60 italic mb-3">
-              Valparaíso, Chile
+              Analista de Datos · Blockchain & SQL · Automatización & ETL
             </p>
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 max-w-xl">
-              Construyendo productos, herramientas y sistemas que generan resultados reales.
+              Analizo ecosistemas complejos de datos y produzco insights accionables. El mismo rigor, cualquier industria.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-4">
@@ -177,10 +175,10 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-sm sm:text-base leading-relaxed">
                 <p className="text-foreground">
-                  Analista de datos con base en Computer Science. Me especialicé en análisis de macrodatos de blockchain durante 4 años, siendo top analista en Flipside Crypto. Aprendo rápido, adopto herramientas nuevas y soy obsesivo con los detalles.
+                  Analista de datos. Pasé 4 años analizando ecosistemas blockchain en una comunidad angloparlante competitiva: 40+ análisis, 13 redes, top analista en Flipside Crypto. Lo mismo aplico ahora a ML y a la construcción de pipelines con LLMs.
                 </p>
                 <p className="text-muted-foreground">
-                  Me gusta aprender a usar nuevas herramientas y potenciar mi capacidad para poder hacer lo que pienso sin problemas.
+                  Formación en Ciencias de la Computación, Universidad de Chile. Remoto desde Valparaíso, inglés C1.
                 </p>
               </div>
             </section>
@@ -198,20 +196,6 @@ export default function Home() {
               ))}
             </section>
 
-            {/* Skills */}
-            <section
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 sm:p-8 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-fade-in"
-              style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
-            >
-              <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
-                Skills
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((s) => (
-                  <SkillBadge key={s}>{s}</SkillBadge>
-                ))}
-              </div>
-            </section>
           </main>
 
           {/* Right — sidebar */}
@@ -263,7 +247,7 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Background */}
+            {/* Background + Skills */}
             <section
               className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
@@ -271,9 +255,16 @@ export default function Home() {
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
                 Background
               </h2>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Computer Science. Especializado en análisis de datos, blockchain y automatización. Experiencia en gestión de proyectos (Scrum, Kanban), herramientas Google y Microsoft. Inglés C1 certificado (EF SET). Trabajo 100% remoto desde Chile.
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                Ingeniería Civil en Ciencias de la Computación, Universidad de Chile (plan común). Inglés C1. Cuatro años de trabajo real en comunidades angloparlantes: análisis, whitepapers, coordinación con equipos en EE.UU. 100% remoto desde Chile. Disponibilidad inmediata.
               </p>
+              <div className="border-t border-border/50 pt-4">
+                <div className="flex flex-wrap gap-2">
+                  {skills.map((s) => (
+                    <SkillBadge key={s}>{s}</SkillBadge>
+                  ))}
+                </div>
+              </div>
             </section>
 
             {/* Proof of Work */}
@@ -285,11 +276,11 @@ export default function Home() {
                 Proof of Work
               </h2>
               <div className="space-y-2 text-sm text-muted-foreground leading-relaxed">
-                <p>🏆 Top analista — <span className="text-primary">Flipside Crypto</span></p>
-                <p>⚗️ Data Alchemist — <span className="text-primary">CovalentHQ</span></p>
-                <p>🥋 Sensei — <span className="text-primary">Struct Finance (Avalanche)</span></p>
-                <p>📣 Ambassador — <span className="text-primary">BlazeStake (Solana)</span></p>
-                <p>🎯 Hackathon Churn — <span className="text-primary">Alura Latam + No Country</span></p>
+                <p>🏆 Top analista · <span className="text-primary">Flipside Crypto</span></p>
+                <p>🧪 Data Alchemist · <span className="text-primary">CovalentHQ</span></p>
+                <p>🧙‍♂️ Sensei · <span className="text-primary">Struct Finance (Avalanche)</span></p>
+                <p>🔥 Ambassador · <span className="text-primary">BlazeStake (Solana)</span></p>
+                <p>🎯 Hackathon Churn · <span className="text-primary">Alura Latam + No Country</span></p>
               </div>
             </section>
           </aside>

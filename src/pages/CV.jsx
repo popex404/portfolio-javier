@@ -126,7 +126,7 @@ export default function CV() {
         <div className="bg-card border border-border rounded-lg px-6 py-4 mb-6 animate-fade-in flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <div>
             <h2 className="text-lg font-semibold text-foreground">Javier García</h2>
-            <p className="text-sm text-muted-foreground">Analista de Datos · Blockchain & SQL · Computer Science</p>
+            <p className="text-sm text-muted-foreground">Analista de Datos · Blockchain & SQL · Automatización & ETL</p>
           </div>
           <p className="text-xs text-muted-foreground sm:text-right max-w-xs">
             Haz clic en "Ver CV" para abrir en Google Drive o "Descargar PDF" para guardar una copia.
@@ -148,7 +148,7 @@ export default function CV() {
               </a>
               <span className="flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5" />
-                La Calera, Chile
+                Valparaíso, Chile
               </span>
               <a href="https://github.com/popex404" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-primary transition-colors">
                 <Github className="w-3.5 h-3.5" />
@@ -169,11 +169,7 @@ export default function CV() {
 
             {/* Intro */}
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              Analista de datos con formación en Ingeniería Civil en Ciencias de la Computación
-              y más de 6 años de trayectoria en análisis de datos, blockchain y gestión de proyectos.
-              Especializado en SQL, Python, Google Workspace, Microsoft Office y LLMs.
-              Top analista en Flipside Crypto y Data Alchemist en CovalentHQ.
-              Orientado al detalle, aprendizaje rápido y toma de decisiones basada en datos.
+              Analista de datos con formación en Ingeniería Civil en Ciencias de la Computación, Universidad de Chile. Top Analista en Flipside Crypto con 40+ análisis publicados en 13 redes blockchain durante 4 años de trabajo en comunidades angloparlantes. El mismo rigor analítico aplicado a machine learning y análisis de negocio: predicción de churn sobre 357K registros con ingeniería de 48 features (Hackathon Alura Latam + No Country, 2025). Inglés C1. Trabajo 100% remoto desde Valparaíso, Chile.
             </p>
 
             {/* Experiencia */}
@@ -255,7 +251,7 @@ export default function CV() {
         </div>
 
         <p className="text-center text-xs text-muted-foreground mt-6 mb-4">
-          +56 9 6748 1782 · La Calera, Valparaíso, Chile
+          +56 9 6748 1782 · Valparaíso, Chile
         </p>
       </div>
     </div>
