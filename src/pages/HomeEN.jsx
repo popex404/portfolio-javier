@@ -13,55 +13,55 @@ const projects = [
   {
     title: 'ChurnInsight',
     role: 'Data Scientist',
-    description: 'Solución end-to-end de predicción de churn en equipo de 9 personas durante el hackathon Alura Latam + No Country (Dic 2025). Construí y evalué modelos de ML (Random Forest, KNN, Regresión Logística) sobre 357K registros, ingeniería de 48 features y segmentación de clientes con K-means.',
+    description: 'End-to-end churn prediction solution built in a team of 9 during the Alura Latam + No Country hackathon (Dec 2025). Built and evaluated ML models (Random Forest, KNN, Logistic Regression) on 357K records, engineered 48 features, and segmented customers with K-means.',
     tech: ['Python', 'scikit-learn', 'FastAPI', 'Docker', 'MySQL'],
     link: 'https://github.com/ChurnGuard/ChurnInsight',
-    linkText: 'Ver Repositorio',
+    linkText: 'View Repository',
   },
   {
     title: 'Blockchain Analytics',
     role: 'Data Analyst',
-    description: 'Dashboards interactivos y análisis on-chain en Flipside Crypto y CovalentHQ. Métricas clave para proyectos blockchain y reportes accesibles para audiencias diversas. Más de 40 análisis en 13 redes blockchain.',
+    description: 'Interactive dashboards and on-chain analyses on Flipside Crypto and CovalentHQ. Key metrics for blockchain projects and accessible reports for diverse audiences. 40+ analyses across 13 blockchain networks.',
     tech: ['SQL', 'Blockchain', 'Tableau', 'Looker Studio', 'Flipside Crypto', 'CovalentHQ'],
-    linkTo: '/dashboards',
-    linkText: 'Ver dashboards',
+    linkTo: '/en/dashboards',
+    linkText: 'View dashboards',
   },
   {
     title: 'Power BI Dashboards',
     role: 'Data Analyst',
-    description: 'Dashboards interactivos desarrollados con Power BI durante el curso de Daxus Latam. Reportes con visualizaciones de métricas de negocio y análisis de datos.',
+    description: 'Interactive dashboards developed with Power BI during the Daxus Latam course. Reports with business metrics visualizations and data analysis.',
     tech: ['Power BI', 'DAX', 'Data Visualization'],
     link: 'https://github.com/popex404/PowerBI-Dashboards',
-    linkText: 'Ver Dashboards',
+    linkText: 'View Dashboards',
   },
   {
     title: 'A&C',
     role: 'Web Developer',
-    description: 'Landing page para A&C Soluciones Agrícolas y Urbanas, empresa de control de plagas certificada SEREMI en Valparaíso.',
+    description: 'Landing page for A&C Soluciones Agrícolas y Urbanas, a SEREMI-certified pest control company in Valparaíso.',
     tech: ['HTML', 'CSS', 'JavaScript', 'SEO'],
     link: 'https://popex404.github.io/fa-ac-demos/',
-    linkText: 'Ver demos',
+    linkText: 'View demos',
   },
   {
     title: 'Gabriela Mistral en el Mundo',
     role: 'Data Visualization',
-    description: 'Mapa interactivo que recorre los lugares visitados por Gabriela Mistral, diseñado en conjunto con Gabriela Rivera. Datos procesados con Python y pandas, visualizados con Folium y publicados en GitHub Pages.',
+    description: 'Interactive map tracing the places visited by Gabriela Mistral, designed together with Gabriela Rivera. Data processed with Python and pandas, visualized with Folium and published on GitHub Pages.',
     tech: ['Python', 'pandas', 'Folium', 'Google Colab'],
     link: 'https://github.com/popex404/Gabriela-Mistral-en-el-Mundo',
-    linkText: 'Ver el mapa',
+    linkText: 'View the map',
   },
   {
     title: 'Alura Latam ONE',
     role: 'Data Scientist',
-    description: 'Serie de desafíos del programa Oracle Next Education de Alura Latam. Cada desafío cubre un dominio distinto.',
+    description: 'Challenge series from the Oracle Next Education program by Alura Latam. Each challenge covers a different domain.',
     tech: ['Python', 'Jupyter', 'SQL', 'MySQL', 'JavaScript'],
     repos: [
-      { label: 'Juego de números secretos', url: 'https://github.com/popex404/juego-secreto' },
-      { label: 'Amigo secreto', url: 'https://github.com/popex404/amigo-secreto' },
-      { label: 'Análisis de rentabilidad (AluraShop)', url: 'https://github.com/popex404/Desafio-Data-Science-1' },
-      { label: 'Predicción de churn Telecom X. parte 1', url: 'https://github.com/popex404/Desafio-Telecom-X' },
-      { label: 'Predicción de churn Telecom X. parte 2', url: 'https://github.com/popex404/Desafio-Telecom-X-parte2' },
-      { label: 'Base de datos MySQL', url: 'https://github.com/popex404/empresa-sql-project' },
+      { label: 'Number guessing game', url: 'https://github.com/popex404/juego-secreto' },
+      { label: 'Secret Santa', url: 'https://github.com/popex404/amigo-secreto' },
+      { label: 'Profitability analysis (AluraShop)', url: 'https://github.com/popex404/Desafio-Data-Science-1' },
+      { label: 'Telecom X churn prediction — part 1', url: 'https://github.com/popex404/Desafio-Telecom-X' },
+      { label: 'Telecom X churn prediction — part 2', url: 'https://github.com/popex404/Desafio-Telecom-X-parte2' },
+      { label: 'MySQL database', url: 'https://github.com/popex404/empresa-sql-project' },
     ],
   },
 ]
@@ -86,7 +86,7 @@ const skills = [
   'Google Workspace',
 ]
 
-export default function Home() {
+export default function HomeEN() {
   const [avatarError, setAvatarError] = useState(false)
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
@@ -106,7 +106,7 @@ export default function Home() {
               <div
                 className={`${avatarError ? 'flex' : 'hidden'} w-full h-full items-center justify-center text-4xl`}
                 role="img"
-                aria-label="Avatar de Javier García"
+                aria-label="Javier García avatar"
               >
                 👨‍💻
               </div>
@@ -120,10 +120,10 @@ export default function Home() {
               Javier García
             </h1>
             <p className="text-lg sm:text-xl text-foreground font-semibold mb-1">
-              Analista de Datos · Blockchain & SQL · Automatización & ETL
+              Data Analyst · Blockchain & SQL · Automation & ETL
             </p>
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 max-w-xl">
-              Analizo ecosistemas complejos de datos y produzco insights accionables. El mismo rigor, cualquier industria.
+              Data analyst in complex ecosystems. The same rigor, any industry.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-4">
@@ -137,18 +137,18 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-2 items-center">
               <Link
-                to="/cv"
+                to="/en/cv"
                 className="inline-flex items-center gap-2 px-3 py-2 min-h-[44px] text-sm font-medium rounded-md border border-border bg-transparent hover:bg-accent/10 hover:border-primary/50 transition-all duration-200"
               >
                 <FileText className="w-4 h-4" />
-                Ver CV
+                View CV
               </Link>
               <a
                 href="mailto:javiergarciapinilla95@gmail.com"
                 className="inline-flex items-center gap-2 px-3 py-2 min-h-[44px] text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-transform"
               >
                 <Mail className="w-4 h-4" />
-                Contactar
+                Contact
               </a>
               <a
                 href="https://github.com/popex404"
@@ -174,19 +174,19 @@ export default function Home() {
               style={{ animationDelay: '0.1s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
-                Sobre mí
+                About
               </h2>
               <div className="space-y-4 text-sm sm:text-base leading-relaxed">
                 <p className="text-foreground">
-                  Analista de datos. Pasé 4 años analizando ecosistemas blockchain en una comunidad angloparlante competitiva: 40+ análisis, 13 redes, top analista en Flipside Crypto. Lo mismo aplico ahora a ML y a la construcción de pipelines con LLMs.
+                  Data analyst. I spent 4 years analyzing blockchain ecosystems in a competitive English-speaking community: 40+ analyses, 13 networks, top analyst at Flipside Crypto. I now apply that same rigor to ML and building pipelines with LLMs.
                 </p>
                 <p className="text-muted-foreground">
-                  Formación en Ciencias de la Computación, Universidad de Chile. Remoto desde Valparaíso, inglés C1.
+                  CS background — Universidad de Chile. Remote from Valparaíso, C1 English.
                 </p>
               </div>
             </section>
 
-            {/* Background + Skills — mobile only, appears after About and before Projects */}
+            {/* Background + Skills — mobile only */}
             <section
               className="lg:hidden bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-fade-in"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
@@ -195,7 +195,7 @@ export default function Home() {
                 Background
               </h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Ingeniería Civil en Ciencias de la Computación, Universidad de Chile (plan común). Inglés C1. Cuatro años de trabajo real en comunidades angloparlantes: análisis, whitepapers, coordinación con equipos en EE.UU. 100% remoto desde Chile. Disponibilidad inmediata.
+                Computer Science Engineering, Universidad de Chile (common core). C1 English. Four years of real work in English-speaking communities: analyses, whitepapers, coordination with teams in the US. 100% remote from Chile. Immediately available.
               </p>
               <div className="border-t border-border/50 pt-4">
                 <div className="flex flex-wrap gap-2">
@@ -212,7 +212,7 @@ export default function Home() {
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-6 font-semibold">
-                Proyectos
+                Projects
               </h2>
               {projects.map((p) => (
                 <ProjectCard key={p.title} {...p} />
@@ -224,13 +224,13 @@ export default function Home() {
           {/* Right — sidebar */}
           <aside className="space-y-6">
 
-            {/* Contact — desktop only (hero already has contact links) */}
+            {/* Contact — desktop only */}
             <section
               className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
-                Contacto
+                Contact
               </h2>
               <div className="space-y-3 text-sm">
                 <a
@@ -270,7 +270,7 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Background + Skills — desktop only (mobile version is in main content above) */}
+            {/* Background + Skills — desktop only */}
             <section
               className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
@@ -279,7 +279,7 @@ export default function Home() {
                 Background
               </h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Ingeniería Civil en Ciencias de la Computación, Universidad de Chile (plan común). Inglés C1. Cuatro años de trabajo real en comunidades angloparlantes: análisis, whitepapers, coordinación con equipos en EE.UU. 100% remoto desde Chile. Disponibilidad inmediata.
+                Computer Science Engineering, Universidad de Chile (common core). C1 English. Four years of real work in English-speaking communities: analyses, whitepapers, coordination with teams in the US. 100% remote from Chile. Immediately available.
               </p>
               <div className="border-t border-border/50 pt-4">
                 <div className="flex flex-wrap gap-2">
@@ -290,7 +290,7 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Proof of Work — desktop only (mobile version is in main content above) */}
+            {/* Proof of Work — desktop only */}
             <section
               className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
@@ -299,7 +299,7 @@ export default function Home() {
                 Proof of Work
               </h2>
               <div className="space-y-2 text-sm text-muted-foreground leading-relaxed">
-                <p>🏆 Top analista · <span className="text-primary">Flipside Crypto</span></p>
+                <p>🏆 Top Analyst · <span className="text-primary">Flipside Crypto</span></p>
                 <p>🧪 Data Alchemist · <span className="text-primary">CovalentHQ</span></p>
                 <p>🧙‍♂️ Sensei · <span className="text-primary">Struct Finance (Avalanche)</span></p>
                 <p>🔥 Ambassador · <span className="text-primary">BlazeStake (Solana)</span></p>
@@ -312,7 +312,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Hecho por Javier García. Para colaboraciones o proyectos, escríbeme a{' '}
+            Made by Javier García. For collaborations or projects, reach me at{' '}
             <a href="mailto:javiergarciapinilla95@gmail.com" className="text-primary hover:underline">
               javiergarciapinilla95@gmail.com
             </a>
