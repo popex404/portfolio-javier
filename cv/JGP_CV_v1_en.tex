@@ -1,0 +1,156 @@
+% ============================================================
+%  JGP_CV_v1_en.tex — Javier García Pinilla  (English)
+%  Compilar con: pdflatex o xelatex
+%  Online: overleaf.com → New Project → Upload
+% ============================================================
+\documentclass[12pt, a4paper]{article}
+
+% ── Encoding & language ──────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+% ── Page ─────────────────────────────────────────────────────
+\usepackage[
+  top=1.6cm, bottom=1.4cm,
+  left=2cm,  right=2cm
+]{geometry}
+
+% ── Typography ───────────────────────────────────────────────
+\usepackage{ebgaramond}
+% If ebgaramond is not available, comment above and uncomment:
+% \usepackage{lmodern}
+
+% ── Utilities ────────────────────────────────────────────────
+\usepackage{parskip}
+\setlength{\parskip}{0pt}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{xcolor}
+
+\hypersetup{colorlinks=true, urlcolor=blue, hidelinks}
+\pagestyle{empty}
+
+\setlist[itemize]{leftmargin=1.5em, itemsep=0pt, parsep=0pt, topsep=2pt}
+
+% ── Section with rule ────────────────────────────────────────
+\newcommand{\seccion}[1]{%
+  \vspace{7pt}%
+  {\large\bfseries #1}%
+  \vspace{1pt}%
+  \hrule height 0.5pt%
+  \vspace{2pt}%
+}
+
+% ── Experience entry ─────────────────────────────────────────
+\newcommand{\trabajo}[4]{%
+  \noindent\textbf{#1} \hfill \textbf{#2}\\
+  \textit{#3} \hfill \textit{#4}%
+  \vspace{1pt}%
+}
+
+% ── Education entry ──────────────────────────────────────────
+\newcommand{\edu}[4]{%
+  \noindent\textbf{#1} \hfill \textbf{#2}\\
+  \textit{#3} \hfill \textit{#4}%
+  \vspace{1pt}%
+}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+% ── HEADER ──────────────────────────────────────────────────
+{%
+  \centering
+  {\fontsize{24}{28.8}\selectfont\bfseries Javier García Pinilla}\par
+  \vspace{1pt}
+  {\fontsize{16}{19}\selectfont javiergarciapinilla95@gmail.com
+    \quad|\quad +56\,9\,6748\,1782
+    \quad|\quad Valparaíso, Chile}\par
+  \vspace{1pt}
+  \hrule height 0.5pt
+\par}
+\vspace{5pt}
+
+% ── INTRODUCTION ────────────────────────────────────────────
+\noindent
+Data analyst with academic background in Computer Science Engineering,
+Universidad de Chile. Top Analyst at Flipside Crypto and Data Alchemist at CovalentHQ,
+with experience in on-chain analysis across multiple blockchain networks for
+English-speaking communities. The same rigor applied to machine learning and data
+automation. C1 English.
+
+% ── WORK EXPERIENCE ─────────────────────────────────────────
+\seccion{WORK EXPERIENCE}
+
+\trabajo{Duran Alta Gestión SPA}{2025 -- 2026}{IT Services Consultant}{El Melón, Chile}
+\begin{itemize}
+  \item Designed Excel templates and standardized workflows to resolve frequent
+        spreadsheet errors, improving data accuracy and reducing dependency on IT support.
+  \item Developed troubleshooting guides that enabled the accounting team to manage
+        common issues autonomously, increasing operational efficiency.
+\end{itemize}
+\vspace{2pt}
+
+\trabajo{FlipsideCrypto}{2021 -- 2025}{Blockchain Data Analyst}{Remote}
+\begin{itemize}
+  \item Built interactive dashboards and data models to clarify complex on-chain
+        information, facilitating interpretation of key metrics and decision-making.
+  \item Prepared accessible reports and analyses for diverse audiences, increasing
+        public interest and visits to associated websites.
+\end{itemize}
+\vspace{2pt}
+
+\trabajo{GSG Group}{2019 -- 2021}{Executive Assistant}{Remote}
+\begin{itemize}
+  \item Managed calendars, meeting coordination, and operational workflows for
+        C-suite executives, optimizing availability and internal organization.
+  \item Improved administrative Excel templates and optimized internal processes,
+        enabling clearer communication and efficient task tracking.
+\end{itemize}
+
+% ── CERTIFICATIONS ──────────────────────────────────────────
+\seccion{CERTIFICATIONS}
+
+\begin{tabularx}{\textwidth}{@{} X X @{}}
+  Data Analysis \textbar{} Google Coursera                  & Advanced Data Analysis \textbar{} SENCE               \\[2pt]
+  Project Management \textbar{} Google Coursera             & Data Science \textbar{} Alura Latam                   \\[2pt]
+  AI \& Productivity \textbar{} Google                      & Blockchain Analysis \textbar{} CovalentHQ             \\[2pt]
+  Marketing and SEO \textbar{} Santander Open Academy       & Power BI Masterclass \textbar{} Alura Latam            \\[2pt]
+  English Certificate C1 \textbar{} EF SET                  & Power BI + AI \textbar{} Daxus Latam                  \\[2pt]
+  Administrative Assistant \textbar{} Pareto Talent         & Oracle Cloud Foundations \textbar{} Oracle            \\[2pt]
+  Hackathon Alura Latam ONE \textbar{} No Country           &                                                       \\
+\end{tabularx}
+
+% ── EDUCATION ───────────────────────────────────────────────
+\seccion{EDUCATION}
+
+\edu{Universidad de Chile}{2014 -- 2020}%
+    {Computer Science Engineering}{Santiago, Chile}
+
+\noindent\small Common Core completed + specialization courses (incomplete studies)
+\vspace{4pt}
+
+\edu{Colegio Cervantino}{2009 -- 2013}%
+    {High School Diploma}{Putaendo, Chile}
+
+% ── SKILLS ──────────────────────────────────────────────────
+\seccion{SKILLS}
+
+\begin{tabularx}{\textwidth}{@{} >{\bfseries}l X @{}}
+  Software      & SQL \textbullet{} Python \textbullet{} Google Workspace \textbullet{}
+                  Microsoft Office \textbullet{} Power BI \textbullet{} Tableau \textbullet{}
+                  LLMs \textbullet{} GitHub \textbullet{} SAP \\[3pt]
+  Methodologies & Project Management \textbullet{} Scrum \textbullet{} Kanban \textbullet{}
+                  RACI Charts \textbullet{} Gantt \textbullet{} Agile and Waterfall
+                  Methodologies \\[3pt]
+  Languages     & Spanish (Native) \textbullet{} English C1 (Advanced) \\
+\end{tabularx}
+
+% ============================================================
+\end{document}

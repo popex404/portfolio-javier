@@ -84,8 +84,8 @@ function SectionTitle({ children }) {
 }
 
 export default function CVEN() {
-  const googleDocsUrl = 'https://drive.google.com/file/d/1mAlIksGz3oTgTRAeDdt7E0D1AWCZ6TwL/view?usp=sharing'
-  const pdfUrl = 'https://drive.google.com/uc?export=download&id=1mAlIksGz3oTgTRAeDdt7E0D1AWCZ6TwL'
+  const googleDocsUrl = 'https://drive.google.com/file/d/1kjfU2srFC8xcuarkUZLUILeWC1IGLUHd/view?usp=sharing'
+  const pdfUrl = 'https://drive.google.com/uc?export=download&id=1kjfU2srFC8xcuarkUZLUILeWC1IGLUHd'
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
