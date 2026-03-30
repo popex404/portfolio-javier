@@ -8,8 +8,8 @@ const experience = [
     role: 'Consultor de Servicios TI',
     location: 'El Melón, Chile',
     bullets: [
-      'Diseñar y estandarizar plantillas de Excel y flujos de trabajo para resolver errores frecuentes en hojas de cálculo, mejorando la precisión de los datos y reduciendo la dependencia del soporte TI.',
-      'Elaborar guías de resolución de problemas que permiten al equipo contable gestionar fallas comunes de forma autónoma, aumentando la eficiencia operativa.',
+      'Diseño y estandarización de plantillas Excel y flujos de trabajo para reducir errores frecuentes en hojas de cálculo y dependencia del soporte TI.',
+      'Elaboración de guías de resolución de problemas para gestión autónoma de fallas comunes por el equipo contable.',
     ],
   },
   {
@@ -18,8 +18,8 @@ const experience = [
     role: 'Analista de Datos Blockchain',
     location: 'Remoto',
     bullets: [
-      'Construir dashboards interactivos y modelos de datos para clarificar información on-chain compleja, facilitando la interpretación de métricas clave y la toma de decisiones.',
-      'Preparar informes y análisis accesibles para audiencias diversas, incrementando el interés del público y las visitas a los sitios web asociados.',
+      'Construcción de dashboards interactivos y modelos de datos para interpretación de métricas clave on-chain y toma de decisiones.',
+      'Preparación de informes y análisis accesibles para audiencias diversas, con impacto en visitas a sitios web asociados.',
     ],
   },
   {
@@ -28,8 +28,8 @@ const experience = [
     role: 'Asistente Ejecutivo',
     location: 'Remoto',
     bullets: [
-      'Gestionar calendarios, coordinación de reuniones y flujos operativos para ejecutivos de nivel C, optimizando su disponibilidad y el orden interno de la organización.',
-      'Mejorar plantillas administrativas en Excel y optimizar procesos internos, permitiendo una comunicación más clara y seguimiento eficiente de tareas.',
+      'Gestión de calendarios, reuniones y flujos operativos para ejecutivos de nivel C.',
+      'Mejora de plantillas administrativas en Excel y optimización de procesos internos para seguimiento eficiente de tareas.',
     ],
   },
 ]
