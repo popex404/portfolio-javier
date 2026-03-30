@@ -1,0 +1,161 @@
+% ============================================================
+%  JGP_CV_v1.tex — Javier García Pinilla  (Español)
+%  Compilar con: pdflatex o xelatex
+%  Online: overleaf.com → New Project → Upload
+% ============================================================
+\documentclass[12pt, a4paper]{article}
+
+% ── Encoding & idioma ────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+% ── Página ───────────────────────────────────────────────────
+\usepackage[
+  top=1.6cm, bottom=1.4cm,
+  left=2cm,  right=2cm
+]{geometry}
+
+% ── Tipografía ───────────────────────────────────────────────
+\usepackage{ebgaramond}
+% Si ebgaramond no está disponible, comentar arriba y descomentar:
+% \usepackage{lmodern}
+
+% ── Utilidades ───────────────────────────────────────────────
+\usepackage{parskip}
+\setlength{\parskip}{0pt}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{xcolor}
+
+\hypersetup{colorlinks=true, urlcolor=blue, hidelinks}
+\pagestyle{empty}
+
+\setlist[itemize]{leftmargin=1.5em, itemsep=0pt, parsep=0pt, topsep=2pt}
+
+% ── Sección con línea ────────────────────────────────────────
+\newcommand{\seccion}[1]{%
+  \vspace{7pt}%
+  {\large\bfseries #1}%
+  \vspace{1pt}%
+  \hrule height 0.5pt%
+  \vspace{2pt}%
+}
+
+% ── Entrada de experiencia ───────────────────────────────────
+\newcommand{\trabajo}[4]{%
+  \noindent\textbf{#1} \hfill \textbf{#2}\\
+  \textit{#3} \hfill \textit{#4}%
+  \vspace{1pt}%
+}
+
+% ── Entrada de educación ─────────────────────────────────────
+\newcommand{\edu}[4]{%
+  \noindent\textbf{#1} \hfill \textbf{#2}\\
+  \textit{#3} \hfill \textit{#4}%
+  \vspace{1pt}%
+}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+% ── HEADER ──────────────────────────────────────────────────
+% \centering en grupo evita el espacio extra de \begin{center}
+% La regla queda pegada al contacto, igual que el borde de párrafo del Word
+{%
+  \centering
+  {\fontsize{24}{28.8}\selectfont\bfseries Javier García Pinilla}\par
+  \vspace{1pt}
+  {\fontsize{16}{19}\selectfont javiergarciapinilla95@gmail.com
+    \quad|\quad +56\,9\,6748\,1782
+    \quad|\quad Valparaíso, Chile}\par
+  \vspace{1pt}
+  \hrule height 0.5pt
+\par}
+\vspace{5pt}
+
+% ── INTRODUCCIÓN ────────────────────────────────────────────
+\noindent
+Analista de datos con formación en Ingeniería Civil en Ciencias de la Computación,
+Universidad de Chile. Top Analista en Flipside Crypto y Data Alchemist en CovalentHQ,
+con experiencia en análisis on-chain en múltiples redes blockchain para comunidades
+angloparlantes. El mismo rigor aplicado a machine learning y automatización de datos.
+Inglés C1.
+
+% ── EXPERIENCIA ─────────────────────────────────────────────
+\seccion{EXPERIENCIA}
+
+\trabajo{Duran Alta Gestión SPA}{2025 -- 2026}{Consultor de Servicios TI}{El Melón, Chile}
+\begin{itemize}
+  \item Diseñar y estandarizar plantillas de Excel y flujos de trabajo para resolver errores
+        frecuentes en hojas de cálculo, mejorando la precisión de los datos y reduciendo
+        la dependencia del soporte TI.
+  \item Elaborar guías de resolución de problemas que permiten al equipo contable
+        gestionar fallas comunes de forma autónoma, aumentando la eficiencia operativa.
+\end{itemize}
+\vspace{2pt}
+
+\trabajo{FlipsideCrypto}{2021 -- 2025}{Analista de Datos Blockchain}{Remoto}
+\begin{itemize}
+  \item Construir dashboards interactivos y modelos de datos para clarificar información
+        on-chain compleja, facilitando la interpretación de métricas clave y la toma
+        de decisiones.
+  \item Preparar informes y análisis accesibles para audiencias diversas, incrementando
+        el interés del público y las visitas a los sitios web asociados.
+\end{itemize}
+\vspace{2pt}
+
+\trabajo{GSG Group}{2019 -- 2021}{Asistente Ejecutivo}{Remoto}
+\begin{itemize}
+  \item Gestionar calendarios, coordinación de reuniones y flujos operativos para
+        ejecutivos de nivel C, optimizando su disponibilidad y el orden interno
+        de la organización.
+  \item Mejorar plantillas administrativas en Excel y optimizar procesos internos,
+        permitiendo una comunicación más clara y seguimiento eficiente de tareas.
+\end{itemize}
+
+% ── CERTIFICACIONES ─────────────────────────────────────────
+\seccion{CERTIFICACIONES}
+
+\begin{tabularx}{\textwidth}{@{} X X @{}}
+  Análisis de datos \textbar{} Google Coursera            & Análisis de datos avanzado \textbar{} SENCE           \\[2pt]
+  Gestión de proyectos \textbar{} Google Coursera          & Ciencia de datos \textbar{} Alura Latam               \\[2pt]
+  Inteligencia artificial y productividad \textbar{} Google & Análisis de blockchain \textbar{} CovalentHQ         \\[2pt]
+  Marketing y SEO \textbar{} Santander Open Academy        & Power BI Masterclass \textbar{} Alura Latam           \\[2pt]
+  Certificado inglés C1 \textbar{} EF SET                  & Power BI + IA \textbar{} Daxus Latam                  \\[2pt]
+  Asistente administrativo \textbar{} Pareto Talent        & Oracle Cloud Foundations \textbar{} Oracle            \\[2pt]
+  Hackathon Alura Latam ONE \textbar{} No Country          &                                                       \\
+\end{tabularx}
+
+% ── EDUCACIÓN ───────────────────────────────────────────────
+\seccion{EDUCACIÓN}
+
+\edu{Universidad de Chile}{2014 -- 2020}%
+    {Ingeniería Civil en Ciencias de la Computación}{Santiago, Chile}
+
+\noindent\small Plan Común aprobado + cursos de especialización (estudios incompletos)
+\vspace{4pt}
+
+\edu{Colegio Cervantino}{2009 -- 2013}%
+    {Certificado de Enseñanza Media}{Putaendo, Chile}
+
+% ── HABILIDADES ─────────────────────────────────────────────
+\seccion{HABILIDADES}
+
+\begin{tabularx}{\textwidth}{@{} >{\bfseries}l X @{}}
+  Software    & SQL \textbullet{} Python \textbullet{} Google Workspace \textbullet{}
+                Microsoft Office \textbullet{} Power BI \textbullet{} Tableau \textbullet{}
+                LLMs \textbullet{} GitHub \textbullet{} SAP \\[3pt]
+  Metodologías & Gestión de Proyectos \textbullet{} Scrum \textbullet{} Kanban \textbullet{}
+                 Diagramas RACI \textbullet{} Gantt \textbullet{} Metodologías Ágiles
+                 y en Cascada \\[3pt]
+  Idiomas     & Español nativo \textbullet{} Inglés C1 (Avanzado) \\
+\end{tabularx}
+
+% ============================================================
+\end{document}

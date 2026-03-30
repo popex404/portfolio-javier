@@ -8,8 +8,8 @@ const experience = [
     role: 'Consultor de Servicios TI',
     location: 'El Melón, Chile',
     bullets: [
-      'Diseñó plantillas de Excel y estandarizó flujos de trabajo para resolver errores frecuentes en hojas de cálculo, mejorando la precisión de los datos y reduciendo la dependencia del soporte TI.',
-      'Elaboró guías de resolución de problemas que permitieron al equipo contable gestionar fallas comunes de forma autónoma, aumentando la eficiencia operativa.',
+      'Diseñar y estandarizar plantillas de Excel y flujos de trabajo para resolver errores frecuentes en hojas de cálculo, mejorando la precisión de los datos y reduciendo la dependencia del soporte TI.',
+      'Elaborar guías de resolución de problemas que permiten al equipo contable gestionar fallas comunes de forma autónoma, aumentando la eficiencia operativa.',
     ],
   },
   {
@@ -18,8 +18,8 @@ const experience = [
     role: 'Analista de Datos Blockchain',
     location: 'Remoto',
     bullets: [
-      'Construyó dashboards interactivos y modelos de datos para clarificar información on-chain compleja, facilitando la interpretación de métricas clave y la toma de decisiones.',
-      'Preparó informes y análisis accesibles para audiencias diversas, incrementando el interés del público y las visitas a los sitios web asociados.',
+      'Construir dashboards interactivos y modelos de datos para clarificar información on-chain compleja, facilitando la interpretación de métricas clave y la toma de decisiones.',
+      'Preparar informes y análisis accesibles para audiencias diversas, incrementando el interés del público y las visitas a los sitios web asociados.',
     ],
   },
   {
@@ -28,8 +28,8 @@ const experience = [
     role: 'Asistente Ejecutivo',
     location: 'Remoto',
     bullets: [
-      'Gestionó calendarios, coordinación de reuniones y flujos operativos para ejecutivos de nivel C, optimizando su disponibilidad y el orden interno de la organización.',
-      'Mejoró plantillas administrativas en Excel y optimizó procesos internos, permitiendo una comunicación más clara y seguimiento eficiente de tareas.',
+      'Gestionar calendarios, coordinación de reuniones y flujos operativos para ejecutivos de nivel C, optimizando su disponibilidad y el orden interno de la organización.',
+      'Mejorar plantillas administrativas en Excel y optimizar procesos internos, permitiendo una comunicación más clara y seguimiento eficiente de tareas.',
     ],
   },
 ]
