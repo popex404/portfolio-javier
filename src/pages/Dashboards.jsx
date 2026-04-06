@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ExternalLink, ChevronLeft, ChevronRight, Twitter, ChevronDown } from 'lucide-react'
 import { ANALYSES, FULL_DASHBOARDS, SPECIALS, CHAIN_CONFIG, PLATFORM_CONFIG } from '../data/dashboardData'
+import { useLang } from '../context/LangContext'
+import { content } from '../data/content'
 
 const PRIMARY_CHAINS = ['Solana', 'Avalanche', 'Ethereum', 'NEAR', 'Covalent']
 const SECONDARY_CHAINS = ['BSC', 'Base', 'Cosmos', 'Algorand', 'Terra Luna', 'Flow', 'Arbitrum', 'Evmos', 'Aurora']
@@ -31,9 +33,11 @@ function PlatformBadge({ platform }) {
 }
 
 function AnalysisCard({ analysis }) {
-  const dashIdx = analysis.title.indexOf(' — ')
-  const mainTitle = dashIdx !== -1 ? analysis.title.slice(0, dashIdx) : analysis.title
-  const subtitle = dashIdx !== -1 ? analysis.title.slice(dashIdx + 3) : null
+  const { lang } = useLang()
+  const displayTitle = lang === 'en' ? (analysis.titleEN || analysis.title) : analysis.title
+  const dashIdx = displayTitle.indexOf(' — ')
+  const mainTitle = dashIdx !== -1 ? displayTitle.slice(0, dashIdx) : displayTitle
+  const subtitle = dashIdx !== -1 ? displayTitle.slice(dashIdx + 3) : null
 
   return (
     <a
@@ -59,7 +63,7 @@ function AnalysisCard({ analysis }) {
   )
 }
 
-function ImageLightbox({ src, alt, onClose }) {
+function ImageLightbox({ src, alt, onClose, ariaLabel }) {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose()
@@ -74,7 +78,7 @@ function ImageLightbox({ src, alt, onClose }) {
       onClick={onClose}
       role="dialog"
       aria-modal="true"
-      aria-label="Vista ampliada de dashboard"
+      aria-label={ariaLabel}
     >
       <div className="relative min-h-full flex items-start justify-center p-4 pt-12">
         <button
@@ -95,7 +99,8 @@ function ImageLightbox({ src, alt, onClose }) {
   )
 }
 
-function DashboardCarousel() {
+function DashboardCarousel({ t }) {
+  const { lang } = useLang()
   const slides = FULL_DASHBOARDS.filter((d) => d.image)
   const [idx, setIdx] = useState(0)
   const [lightbox, setLightbox] = useState(false)
@@ -115,17 +120,27 @@ function DashboardCarousel() {
     setTouchStart(null)
   }
 
+  const currentDisplayTitle = lang === 'en' ? (current.titleEN || current.title) : current.title
+  const dashIdx = currentDisplayTitle.indexOf(' — ')
+  const mainTitle = dashIdx !== -1 ? currentDisplayTitle.slice(0, dashIdx) : currentDisplayTitle
+  const subtitle = dashIdx !== -1 ? currentDisplayTitle.slice(dashIdx + 3) : null
+
   return (
     <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl">
       <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-3 font-semibold">
-        Capturas de mis Dashboards
+        {t.carouselTitle}
       </h2>
       <p className="text-xs text-muted-foreground mb-4 -mt-1">
-        Snapshots de dashboards desarrolladas usando FlipsideCrypto. Los informes originales ya no están disponibles online, estos son los registros visuales que quedan.
+        {t.carouselSubtitle}
       </p>
 
       {lightbox && (
-        <ImageLightbox src={current.image} alt={current.title} onClose={() => setLightbox(false)} />
+        <ImageLightbox
+          src={current.image}
+          alt={current.title}
+          onClose={() => setLightbox(false)}
+          ariaLabel={t.lightboxAriaLabel}
+        />
       )}
 
       <div
@@ -146,21 +161,21 @@ function DashboardCarousel() {
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             <div className="absolute bottom-2 right-2 flex items-center gap-1 text-[11px] text-white/80 bg-black/40 rounded px-2 py-1">
               <ExternalLink className="w-3 h-3" />
-              Ver completa
+              {t.viewFullSize}
             </div>
           </div>
         </button>
 
         <button
           onClick={prev}
-          aria-label="Anterior"
+          aria-label={t.prevLabel}
           className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-background/80 border border-border flex items-center justify-center hover:border-primary/50 hover:bg-accent/20 transition-all"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
         <button
           onClick={next}
-          aria-label="Siguiente"
+          aria-label={t.nextLabel}
           className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-background/80 border border-border flex items-center justify-center hover:border-primary/50 hover:bg-accent/20 transition-all"
         >
           <ChevronRight className="w-5 h-5" />
@@ -168,18 +183,9 @@ function DashboardCarousel() {
       </div>
 
       <div className="mt-4">
-        <p className="text-xs text-muted-foreground/60 italic mt-3 mb-1">Haz clic en la imagen para verla en tamaño completo.</p>
-        {(() => {
-          const dashIdx = current.title.indexOf(' — ')
-          const mainTitle = dashIdx !== -1 ? current.title.slice(0, dashIdx) : current.title
-          const subtitle = dashIdx !== -1 ? current.title.slice(dashIdx + 3) : null
-          return (
-            <>
-              <p className="text-sm font-semibold text-foreground">{mainTitle}</p>
-              {subtitle && <p className="text-xs text-muted-foreground mt-0.5">{subtitle}</p>}
-            </>
-          )
-        })()}
+        <p className="text-xs text-muted-foreground/60 italic mt-3 mb-1">{t.clickHint}</p>
+        <p className="text-sm font-semibold text-foreground">{mainTitle}</p>
+        {subtitle && <p className="text-xs text-muted-foreground mt-0.5">{subtitle}</p>}
         <div className="flex flex-wrap items-center gap-2 mt-1.5">
           {current.chains.map((c) => <ChainBadge key={c} chain={c} small />)}
           <PlatformBadge platform={current.platform} />
@@ -191,7 +197,7 @@ function DashboardCarousel() {
           className="inline-flex items-center gap-1 text-xs text-primary hover:underline mt-2"
         >
           <Twitter className="w-3 h-3" />
-          Ver tweet original
+          {t.viewTweetLabel}
         </a>
       </div>
 
@@ -200,7 +206,7 @@ function DashboardCarousel() {
           <button
             key={i}
             onClick={() => setIdx(i)}
-            aria-label={`Ir a imagen ${i + 1}`}
+            aria-label={t.goToImage(i)}
             aria-current={i === idx ? true : undefined}
             className="flex items-center justify-center min-w-[44px] min-h-[44px]"
           >
@@ -215,6 +221,9 @@ function DashboardCarousel() {
 }
 
 export default function Dashboards() {
+  const { lang } = useLang()
+  const t = content[lang].dashboards
+
   const [activeChain, setActiveChain] = useState('Solana')
   const [showOthers, setShowOthers] = useState(false)
 
@@ -230,13 +239,12 @@ export default function Dashboards() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
 
-      {/* Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-8 sm:pb-12">
 
         {/* Header */}
         <div className="mb-6 animate-fade-in">
           <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-primary">
-            Mis Dashboards
+            {t.title}
           </h1>
         </div>
 
@@ -244,44 +252,43 @@ export default function Dashboards() {
         <div className="mb-4 animate-fade-in">
           <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-5 sm:p-6">
             <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-3 font-semibold">
-              Blockchain Analytics
+              {t.card1Title}
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Entre 2022 y 2024 trabajé como analista independiente utilizando{' '}
+              {t.card1Pre}{' '}
               <a href="https://flipsidecrypto.xyz" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">Flipside Crypto</a>{' '}
-              como plataforma principal, junto a otras herramientas como{' '}
+              {t.card1Mid}{' '}
               <a href="https://www.covalenthq.com" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">CovalentHQ</a>{' '}
-              y Dune. Construí dashboards e informes sobre flujos de capital, actividad DeFi y NFT, y eventos de mercado en Solana, Avalanche, Ethereum, NEAR y nueve redes más.
-              Fui reconocido como <span className="text-foreground font-medium">Top Analista en Flipside Crypto</span> y <span className="text-foreground font-medium">Data Alchemist en CovalentHQ</span>.
+              {t.card1Post}{' '}
+              {t.card1RecognizedAs} <span className="text-foreground font-medium">{t.card1TopAnalyst}</span> {t.card1And} <span className="text-foreground font-medium">{t.card1DataAlchemist}</span>.
             </p>
           </div>
         </div>
 
-        {/* Card 2: Trabajo en público */}
+        {/* Card 2: Work in public */}
         <div className="mb-8 animate-fade-in">
           <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-5 sm:p-6">
             <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-3 font-semibold">
-              Trabajo en público
+              {t.card2Title}
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Cada análisis lo compartía en Twitter: hilos explicando los hallazgos principales a las comunidades cripto.
-              Con el tiempo, eso generó reconocimientos de proyectos y dejó un registro público de cuatro años de trabajo.
-              En 2025, Flipside migró a un modelo de IA y la plataforma dejó de existir. Lo que queda son estos tweets:{' '}
-              <span className="text-foreground font-medium">más de 40 análisis</span> en{' '}
-              <span className="text-foreground font-medium">13 redes blockchain</span>.
+              {t.card2Pre}{' '}
+              <span className="text-foreground font-medium">{t.card2Analyses}</span>{' '}
+              {t.card2In}{' '}
+              <span className="text-foreground font-medium">{t.card2Networks}</span>.
             </p>
           </div>
         </div>
 
         {/* Carousel */}
         <div className="mb-8 animate-fade-in">
-          <DashboardCarousel />
+          <DashboardCarousel t={t} />
         </div>
 
-        {/* Twitter profile + Reconocimientos */}
+        {/* Twitter profile + Recognitions */}
         <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
           <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-3 font-semibold">
-            Reconocimientos
+            {t.recognitionsTitle}
           </h2>
 
           {/* Twitter profile card */}
@@ -293,7 +300,7 @@ export default function Dashboards() {
           >
             <img
               src={`${import.meta.env.BASE_URL}avatar-twitter.jpg`}
-              alt="@Popex404 en X / Twitter"
+              alt={t.twitterAlt}
               className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-border shrink-0 object-cover"
             />
             <div className="flex-1 min-w-0">
@@ -305,7 +312,7 @@ export default function Dashboards() {
             </div>
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-foreground text-background text-xs font-semibold shrink-0 group-hover:bg-primary transition-colors">
               <Twitter className="w-3 h-3" />
-              Ver perfil
+              {t.viewProfileLabel}
             </span>
           </a>
 
@@ -328,7 +335,7 @@ export default function Dashboards() {
                   "{s.text}"
                 </p>
                 <span className="text-[10px] text-primary/60 group-hover:text-primary mt-2 block transition-colors">
-                  Ver tweet →
+                  {t.viewTweetShort}
                 </span>
               </a>
             ))}
@@ -341,14 +348,14 @@ export default function Dashboards() {
           style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
         >
           <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-2 font-semibold">
-            Publicaciones de mis Dashboards
+            {t.publicationsTitle}
           </h2>
           <p className="text-xs text-muted-foreground mb-4">
-            Posts en Twitter explicando los highlights más importantes de mis dashboards a las comunidades cripto, a través de hilos interactivos.
+            {t.publicationsSubtitle}
           </p>
 
           {/* Primary chain buttons */}
-          <div role="group" aria-label="Filtrar por blockchain" className="flex flex-wrap gap-2 mb-2">
+          <div role="group" aria-label={t.filterAriaLabel} className="flex flex-wrap gap-2 mb-2">
             {PRIMARY_CHAINS.map((chain) => {
               const cfg = CHAIN_CONFIG[chain]
               const isActive = activeChain === chain
@@ -371,7 +378,7 @@ export default function Dashboards() {
               )
             })}
 
-            {/* Otras Blockchains toggle */}
+            {/* Other Blockchains toggle */}
             <button
               onClick={() => setShowOthers(!showOthers)}
               aria-pressed={showOthers || isSecondaryActive}
@@ -382,14 +389,14 @@ export default function Dashboards() {
                   : { color: 'hsl(var(--muted-foreground))', background: 'transparent', borderColor: 'hsl(var(--border))' }
               }
             >
-              Otras Blockchains
+              {t.otherBlockchains}
               <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${showOthers || isSecondaryActive ? 'rotate-180' : ''}`} />
             </button>
           </div>
 
           {/* Secondary chain buttons */}
           {(showOthers || isSecondaryActive) && (
-            <div role="group" aria-label="Filtrar por blockchain" className="flex flex-wrap gap-2 mb-2 mt-2 pl-3 border-l-2 border-border">
+            <div role="group" aria-label={t.filterAriaLabel} className="flex flex-wrap gap-2 mb-2 mt-2 pl-3 border-l-2 border-border">
               {SECONDARY_CHAINS.map((chain) => {
                 const cfg = CHAIN_CONFIG[chain]
                 const isActive = activeChain === chain
@@ -418,7 +425,7 @@ export default function Dashboards() {
           <div className="space-y-2 mt-5">
             {filtered.length === 0 && (
               <p className="text-sm text-muted-foreground text-center py-8">
-                Sin análisis para esta blockchain.
+                {t.noAnalyses}
               </p>
             )}
             {filtered.map((a) => <AnalysisCard key={a.id} analysis={a} />)}
@@ -428,8 +435,8 @@ export default function Dashboards() {
         {/* Footer */}
         <footer className="mt-8 pt-6 border-t border-border text-center">
           <p className="text-xs text-muted-foreground">
-            Hecho por Javier García ·{' '}
-            <Link to="/" className="text-primary hover:underline">Volver al portfolio</Link>
+            {t.footerText}{' '}
+            <Link to={t.footerLink} className="text-primary hover:underline">{t.footerLinkLabel}</Link>
           </p>
         </footer>
       </div>
