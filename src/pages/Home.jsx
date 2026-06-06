@@ -11,25 +11,46 @@ const contacts = [
   { icon: Mail, label: 'javiergarciapinilla95@gmail.com' },
 ]
 
-const skills = [
-  'SQL',
-  'Python',
-  'R',
-  'Java',
-  'Blockchain',
-  'On-chain Analytics',
-  'Web3 / DeFi',
-  'Tableau',
-  'Power BI',
-  'BigQuery',
-  'Snowflake',
-  'ETL',
-  'Machine Learning',
-  'Git / GitHub',
-  'Claude API / LLMs',
-  'Agile / Scrum',
-  'Google Workspace',
+// Skills grouped by profession. Group labels are translated in content.js (home.skillGroups);
+// the chip names are proper nouns / tech and stay the same in both languages.
+const skillGroups = [
+  { id: 'analisis', skills: ['SQL', 'Python', 'R', 'Power BI', 'Tableau', 'BigQuery', 'Snowflake', 'ETL', 'Machine Learning'] },
+  { id: 'web3', skills: ['Blockchain', 'On-chain Analytics', 'Web3 / DeFi'] },
+  { id: 'ia', skills: ['LLMs', 'Claude API', 'MCPs', 'AI Agents', 'Prompt Engineering'] },
+  { id: 'marketing', skills: ['SEO', 'Local SEO', 'Landing Pages', 'Copywriting'] },
+  { id: 'extras', skills: ['Git / GitHub', 'Docker', 'Agile / Scrum', 'Google Workspace', 'Java'] },
 ]
+
+// Full literal class strings (no interpolation) so Tailwind's content scanner keeps them.
+const groupColors = {
+  analisis: { dot: 'bg-emerald-400', label: 'text-emerald-300', chip: 'bg-emerald-500/10 text-emerald-200 border-emerald-500/30 hover:border-emerald-400/60 [@media(hover:hover)]:hover:shadow-emerald-500/20' },
+  web3: { dot: 'bg-violet-400', label: 'text-violet-300', chip: 'bg-violet-500/10 text-violet-200 border-violet-500/30 hover:border-violet-400/60 [@media(hover:hover)]:hover:shadow-violet-500/20' },
+  ia: { dot: 'bg-sky-400', label: 'text-sky-300', chip: 'bg-sky-500/10 text-sky-200 border-sky-500/30 hover:border-sky-400/60 [@media(hover:hover)]:hover:shadow-sky-500/20' },
+  marketing: { dot: 'bg-amber-400', label: 'text-amber-300', chip: 'bg-amber-500/10 text-amber-200 border-amber-500/30 hover:border-amber-400/60 [@media(hover:hover)]:hover:shadow-amber-500/20' },
+  extras: { dot: 'bg-slate-400', label: 'text-slate-300', chip: 'bg-slate-500/10 text-slate-200 border-slate-500/30 hover:border-slate-400/60 [@media(hover:hover)]:hover:shadow-slate-500/20' },
+}
+
+function SkillGroups({ labels }) {
+  return (
+    <div className="space-y-4">
+      {skillGroups.map(({ id, skills }) => (
+        <div key={id}>
+          <div className="flex items-center gap-2 mb-2">
+            <span className={`w-1.5 h-1.5 rounded-full ${groupColors[id].dot}`} />
+            <span className={`text-[11px] uppercase tracking-wider font-semibold ${groupColors[id].label}`}>
+              {labels[id]}
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-1.5">
+            {skills.map((s) => (
+              <SkillBadge key={s} className={groupColors[id].chip}>{s}</SkillBadge>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export default function Home() {
   const { lang } = useLang()
@@ -142,11 +163,7 @@ export default function Home() {
                 {t.backgroundText}
               </p>
               <div className="border-t border-border/50 pt-4">
-                <div className="flex flex-wrap gap-2">
-                  {skills.map((s) => (
-                    <SkillBadge key={s}>{s}</SkillBadge>
-                  ))}
-                </div>
+                <SkillGroups labels={t.skillGroups} />
               </div>
             </section>
 
@@ -226,11 +243,7 @@ export default function Home() {
                 {t.backgroundText}
               </p>
               <div className="border-t border-border/50 pt-4">
-                <div className="flex flex-wrap gap-2">
-                  {skills.map((s) => (
-                    <SkillBadge key={s}>{s}</SkillBadge>
-                  ))}
-                </div>
+                <SkillGroups labels={t.skillGroups} />
               </div>
             </section>
 
