@@ -20,7 +20,7 @@ export const content = {
       },
       aboutP2: 'Creo en el rigor sin solemnidad: medir antes de opinar, automatizar lo repetitivo y entregar trabajo que otra persona pueda usar sin manual. Hoy aplico ese mismo criterio a machine learning, a pipelines con LLMs y a proyectos web y de marketing para PYMEs.',
       backgroundSection: 'Background',
-      backgroundText: 'Estudié Ingeniería Civil en Ciencias de la Computación en la Universidad de Chile: aprobé el plan común y cursos de especialización, aunque no terminé la carrera. Cuatro años de trabajo real en comunidades angloparlantes: análisis, whitepapers y coordinación con equipos en EE.UU., de forma remota desde Chile. Inglés C1.',
+      backgroundText: 'Ingeniería Civil en Ciencias de la Computación, Universidad de Chile, plan común y cursos de especialización completados, sin titulación. Cuatro años como analista independiente en Flipside Crypto: estudié el comportamiento de distintas redes blockchain, construí dashboards y escribí reportes de análisis para una comunidad internacional, en inglés y desde Chile.',
       skillGroups: {
         analisis: 'Análisis',
         web3: 'Web3 / Blockchain',
@@ -51,8 +51,10 @@ export const content = {
         },
         {
           title: 'Blockchain Analytics',
-          role: 'Data Analyst',
-          roleColor: 'analisis',
+          tags: [
+            { label: 'Data Analyst', color: 'analisis' },
+            { label: 'Web3', color: 'web3' },
+          ],
           description: 'Dashboards interactivos y análisis on-chain en Flipside Crypto y CovalentHQ. Métricas clave para proyectos blockchain y reportes accesibles para audiencias diversas. Más de 40 análisis en 13 redes blockchain.',
           tech: ['SQL', 'Blockchain', 'Tableau', 'Looker Studio', 'Flipside Crypto', 'CovalentHQ'],
           linkTo: '/dashboards',
@@ -267,7 +269,7 @@ export const content = {
       },
       aboutP2: 'I believe in rigor without solemnity: measure before you opine, automate the repetitive, and ship work someone else can use without a manual. Today I apply that same standard to machine learning, LLM pipelines, and web and marketing projects for small businesses.',
       backgroundSection: 'Background',
-      backgroundText: "I studied Computer Science Engineering at Universidad de Chile: I completed the common core and specialization courses, though I didn't finish the degree. Four years of real work in English-speaking communities: analyses, whitepapers and coordination with US teams, working remotely from Chile. C1 English.",
+      backgroundText: 'Computer Science Engineering, Universidad de Chile, common core and specialization courses completed, no degree awarded. Four years as an independent analyst at Flipside Crypto: I studied the behavior of different blockchain networks, built dashboards and wrote analysis reports for an international community, in English and from Chile.',
       skillGroups: {
         analisis: 'Analysis',
         web3: 'Web3 / Blockchain',
@@ -298,8 +300,10 @@ export const content = {
         },
         {
           title: 'Blockchain Analytics',
-          role: 'Data Analyst',
-          roleColor: 'analisis',
+          tags: [
+            { label: 'Data Analyst', color: 'analisis' },
+            { label: 'Web3', color: 'web3' },
+          ],
           description: 'Interactive dashboards and on-chain analyses on Flipside Crypto and CovalentHQ. Key metrics for blockchain projects and accessible reports for diverse audiences. 40+ analyses across 13 blockchain networks.',
           tech: ['SQL', 'Blockchain', 'Tableau', 'Looker Studio', 'Flipside Crypto', 'CovalentHQ'],
           linkTo: '/en/dashboards',
