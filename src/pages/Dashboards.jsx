@@ -126,7 +126,7 @@ function DashboardCarousel({ t }) {
   const subtitle = dashIdx !== -1 ? currentDisplayTitle.slice(dashIdx + 3) : null
 
   return (
-    <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl">
+    <div className="bg-card/80 border border-border rounded-xl p-4 sm:p-6 shadow-xl">
       <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-3 font-semibold">
         {t.carouselTitle}
       </h2>
@@ -250,7 +250,7 @@ export default function Dashboards() {
 
         {/* Card 1: Trayectoria */}
         <div className="mb-4 animate-fade-in">
-          <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-5 sm:p-6">
+          <div className="bg-card/80 border border-border rounded-xl p-5 sm:p-6">
             <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-3 font-semibold">
               {t.card1Title}
             </h2>
@@ -267,7 +267,7 @@ export default function Dashboards() {
 
         {/* Card 2: Work in public */}
         <div className="mb-8 animate-fade-in">
-          <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-5 sm:p-6">
+          <div className="bg-card/80 border border-border rounded-xl p-5 sm:p-6">
             <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-3 font-semibold">
               {t.card2Title}
             </h2>
@@ -344,7 +344,7 @@ export default function Dashboards() {
 
         {/* Main analyses section */}
         <div
-          className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 sm:p-8 shadow-xl mb-6 animate-fade-in"
+          className="bg-card/80 border border-border rounded-xl p-6 sm:p-8 shadow-xl mb-6 animate-fade-in"
           style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
         >
           <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-2 font-semibold">

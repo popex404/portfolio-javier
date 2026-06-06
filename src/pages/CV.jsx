@@ -24,7 +24,7 @@ export default function CV() {
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
 
       {/* Sticky action bar */}
-      <div className="sticky top-12 z-30 bg-background/90 backdrop-blur-md border-b border-border">
+      <div className="sticky top-12 z-30 bg-background/95 border-b border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-2 flex justify-end gap-2">
           <a
             href={googleDocsUrl}
@@ -61,7 +61,7 @@ export default function CV() {
         </div>
 
         {/* CV Card */}
-        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl shadow-xl animate-fade-in">
+        <div className="bg-card/80 border border-border rounded-xl shadow-xl animate-fade-in">
 
           {/* Header */}
           <div className="px-4 sm:px-8 pt-6 sm:pt-8 pb-6 border-b border-border text-center">

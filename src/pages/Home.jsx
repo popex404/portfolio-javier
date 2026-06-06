@@ -139,7 +139,7 @@ export default function Home() {
 
             {/* About */}
             <section
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 sm:p-8 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-fade-in"
+              className="bg-card/80 border border-border rounded-xl p-6 sm:p-8 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-fade-in"
               style={{ animationDelay: '0.1s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
@@ -157,7 +157,7 @@ export default function Home() {
 
             {/* Background + Skills — mobile only, appears after About and before Projects */}
             <section
-              className="lg:hidden bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-fade-in"
+              className="lg:hidden bg-card/80 border border-border rounded-xl p-4 sm:p-6 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-fade-in"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
@@ -173,7 +173,7 @@ export default function Home() {
 
             {/* Featured Work */}
             <section
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 sm:p-8 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-fade-in"
+              className="bg-card/80 border border-border rounded-xl p-6 sm:p-8 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-fade-in"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-6 font-semibold">
@@ -191,7 +191,7 @@ export default function Home() {
 
             {/* Contact — desktop only (hero already has contact links) */}
             <section
-              className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-slide-in-right"
+              className="hidden lg:block bg-card/80 border border-border rounded-xl p-4 sm:p-6 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
@@ -237,7 +237,7 @@ export default function Home() {
 
             {/* Background + Skills — desktop only */}
             <section
-              className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-slide-in-right"
+              className="hidden lg:block bg-card/80 border border-border rounded-xl p-4 sm:p-6 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
@@ -253,7 +253,7 @@ export default function Home() {
 
             {/* Proof of Work — desktop only */}
             <section
-              className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-slide-in-right"
+              className="hidden lg:block bg-card/80 border border-border rounded-xl p-4 sm:p-6 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
