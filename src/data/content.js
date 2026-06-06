@@ -14,11 +14,11 @@ export const content = {
       contactSection: 'Contacto',
       aboutSection: 'Sobre mí',
       aboutP1: {
-        before: 'En los papeles soy analista de datos, pero no me defino por un cargo. Antes que eso soy ',
-        highlight: 'alguien que aprende rápido y disfruta construir cosas con lo que aprende',
-        after: '. Llegué al análisis de datos por las circunstancias; lo que me mantiene es la curiosidad, no el título.',
+        before: '',
+        highlight: 'No me defino por un cargo.',
+        after: ' Soy analista de datos en los papeles, pero he construido landing pages, participado en hackathons y bootcamps, ayudado a PYMEs en TI y marketing, y me he mantenido al día con tecnologías que cambian rápido: primero blockchain, hoy IA. Lo que conecta todo eso no es una especialidad: es la forma de trabajar.',
       },
-      aboutP2: 'Creo en el rigor sin solemnidad: medir antes de opinar, automatizar lo repetitivo y entregar trabajo que otra persona pueda usar sin manual. Hoy aplico ese mismo criterio a machine learning, a pipelines con LLMs y a proyectos web y de marketing para PYMEs.',
+      aboutP2: 'Creo en el rigor sin solemnidad: medir antes de opinar, automatizar lo repetitivo y entregar trabajo que otra persona pueda usar sin manual.',
       backgroundSection: 'Background',
       backgroundText: 'Ingeniería Civil en Ciencias de la Computación, Universidad de Chile, plan común y cursos de especialización completados, sin titulación. Cuatro años como analista independiente en Flipside Crypto: estudié el comportamiento de distintas redes blockchain, construí dashboards y escribí reportes de análisis para una comunidad internacional, en inglés y desde Chile.',
       skillGroups: {
@@ -263,11 +263,11 @@ export const content = {
       contactSection: 'Contact',
       aboutSection: 'About',
       aboutP1: {
-        before: "On paper I'm a data analyst, but I don't define myself by a job title. Before that, I'm ",
-        highlight: 'someone who learns fast and loves building things with what he learns',
-        after: '. I came to data analysis through circumstance; what keeps me here is curiosity, not the title.',
+        before: '',
+        highlight: "I don't define myself by a job title.",
+        after: " On paper I'm a data analyst, but I've built landing pages, taken part in hackathons and bootcamps, helped small businesses with IT and marketing, and kept up with fast-moving tech: first blockchain, now AI. What connects all of it isn't a specialty: it's the way I work.",
       },
-      aboutP2: 'I believe in rigor without solemnity: measure before you opine, automate the repetitive, and ship work someone else can use without a manual. Today I apply that same standard to machine learning, LLM pipelines, and web and marketing projects for small businesses.',
+      aboutP2: 'I believe in rigor without solemnity: measure before you opine, automate the repetitive, and ship work someone else can use without a manual.',
       backgroundSection: 'Background',
       backgroundText: 'Computer Science Engineering, Universidad de Chile, common core and specialization courses completed, no degree awarded. Four years as an independent analyst at Flipside Crypto: I studied the behavior of different blockchain networks, built dashboards and wrote analysis reports for an international community, in English and from Chile.',
       skillGroups: {
