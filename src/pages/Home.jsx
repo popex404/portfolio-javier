@@ -23,11 +23,11 @@ const skillGroups = [
 
 // Full literal class strings (no interpolation) so Tailwind's content scanner keeps them.
 const groupColors = {
-  analisis: { dot: 'bg-emerald-400', label: 'text-emerald-300', chip: 'bg-emerald-500/10 text-emerald-200 border-emerald-500/30 hover:border-emerald-400/60 [@media(hover:hover)]:hover:shadow-emerald-500/20' },
-  web3: { dot: 'bg-violet-400', label: 'text-violet-300', chip: 'bg-violet-500/10 text-violet-200 border-violet-500/30 hover:border-violet-400/60 [@media(hover:hover)]:hover:shadow-violet-500/20' },
-  ia: { dot: 'bg-sky-400', label: 'text-sky-300', chip: 'bg-sky-500/10 text-sky-200 border-sky-500/30 hover:border-sky-400/60 [@media(hover:hover)]:hover:shadow-sky-500/20' },
-  marketing: { dot: 'bg-amber-400', label: 'text-amber-300', chip: 'bg-amber-500/10 text-amber-200 border-amber-500/30 hover:border-amber-400/60 [@media(hover:hover)]:hover:shadow-amber-500/20' },
-  extras: { dot: 'bg-slate-400', label: 'text-slate-300', chip: 'bg-slate-500/10 text-slate-200 border-slate-500/30 hover:border-slate-400/60 [@media(hover:hover)]:hover:shadow-slate-500/20' },
+  analisis: { dot: 'bg-emerald-400', label: 'text-emerald-300', chip: 'bg-emerald-500/10 text-emerald-200 border-emerald-500/30 hover:border-emerald-400/60' },
+  web3: { dot: 'bg-violet-400', label: 'text-violet-300', chip: 'bg-violet-500/10 text-violet-200 border-violet-500/30 hover:border-violet-400/60' },
+  ia: { dot: 'bg-sky-400', label: 'text-sky-300', chip: 'bg-sky-500/10 text-sky-200 border-sky-500/30 hover:border-sky-400/60' },
+  marketing: { dot: 'bg-amber-400', label: 'text-amber-300', chip: 'bg-amber-500/10 text-amber-200 border-amber-500/30 hover:border-amber-400/60' },
+  extras: { dot: 'bg-slate-400', label: 'text-slate-300', chip: 'bg-slate-500/10 text-slate-200 border-slate-500/30 hover:border-slate-400/60' },
 }
 
 function SkillGroups({ labels }) {
@@ -65,7 +65,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-start mb-8 sm:mb-12 animate-fade-in">
           {/* Avatar */}
           <div className="relative group shrink-0">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl object-cover border-2 border-primary/20 shadow-lg transition-all duration-500 group-hover:border-primary/50 group-hover:shadow-2xl group-hover:shadow-primary/20 bg-secondary flex items-center justify-center overflow-hidden">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-2xl object-cover border-2 border-primary/20 shadow-lg transition-colors duration-300 group-hover:border-primary/50 bg-secondary flex items-center justify-center overflow-hidden">
               <img
                 src={`${import.meta.env.BASE_URL}avatar.jpg`}
                 alt="Javier García"
@@ -139,7 +139,7 @@ export default function Home() {
 
             {/* About */}
             <section
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 sm:p-8 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-fade-in"
+              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 sm:p-8 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-fade-in"
               style={{ animationDelay: '0.1s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
@@ -157,7 +157,7 @@ export default function Home() {
 
             {/* Background + Skills — mobile only, appears after About and before Projects */}
             <section
-              className="lg:hidden bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-fade-in"
+              className="lg:hidden bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-fade-in"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
@@ -173,7 +173,7 @@ export default function Home() {
 
             {/* Featured Work */}
             <section
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 sm:p-8 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-fade-in"
+              className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 sm:p-8 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-fade-in"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-6 font-semibold">
@@ -191,7 +191,7 @@ export default function Home() {
 
             {/* Contact — desktop only (hero already has contact links) */}
             <section
-              className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
+              className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
@@ -237,7 +237,7 @@ export default function Home() {
 
             {/* Background + Skills — desktop only */}
             <section
-              className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
+              className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">
@@ -253,7 +253,7 @@ export default function Home() {
 
             {/* Proof of Work — desktop only */}
             <section
-              className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 hover:border-primary/30 animate-slide-in-right"
+              className="hidden lg:block bg-card/50 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 shadow-xl transition-colors duration-200 hover:border-primary/30 animate-slide-in-right"
               style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
             >
               <h2 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 font-semibold">

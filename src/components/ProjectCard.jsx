@@ -20,9 +20,9 @@ export default function ProjectCard({ title, role, roleColor, tags, description,
       : []
 
   return (
-    <div className="group mb-5 sm:mb-6 last:mb-0 p-3 sm:p-4 rounded-lg hover:bg-secondary/30 transition-all duration-300 hover:translate-x-1 overflow-hidden">
+    <div className="group mb-5 sm:mb-6 last:mb-0 p-3 sm:p-4 rounded-lg hover:bg-secondary/30 transition-transform duration-200 hover:translate-x-1 overflow-hidden">
       <div className="flex items-start justify-between gap-2">
-        <h3 className="text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-all duration-300 min-w-0">
+        <h3 className="text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-200 min-w-0">
           {title}
         </h3>
         <div className="flex flex-wrap items-center justify-end gap-1.5 shrink-0 mt-0.5">
