@@ -1,23 +1,44 @@
 import { Link } from 'react-router-dom'
 
-export default function ProjectCard({ title, role, description, tech = [], status, link, linkTo, linkText, repos = [] }) {
+// Full literal class strings (no interpolation) so Tailwind's content scanner keeps them.
+// Same palette as the skill groups in Home.jsx.
+const TAG_COLORS = {
+  analisis: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30',
+  web3: 'bg-violet-500/10 text-violet-300 border-violet-500/30',
+  ia: 'bg-sky-500/10 text-sky-300 border-sky-500/30',
+  marketing: 'bg-amber-500/10 text-amber-300 border-amber-500/30',
+  extras: 'bg-slate-500/10 text-slate-300 border-slate-500/30',
+}
+const DEFAULT_TAG = 'bg-primary/10 text-primary border-primary/20'
+
+export default function ProjectCard({ title, role, roleColor, tags, description, tech = [], status, link, linkTo, linkText, repos = [] }) {
+  // Normalize to a single list of colored badges.
+  const badges = tags && tags.length > 0
+    ? tags
+    : role
+      ? [{ label: role, color: roleColor }]
+      : []
+
   return (
     <div className="group mb-5 sm:mb-6 last:mb-0 p-3 sm:p-4 rounded-lg hover:bg-secondary/30 transition-all duration-300 hover:translate-x-1 overflow-hidden">
       <div className="flex items-start justify-between gap-2">
         <h3 className="text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-all duration-300 min-w-0">
           {title}
         </h3>
-        <div className="flex items-center gap-1.5 shrink-0 mt-0.5">
+        <div className="flex flex-wrap items-center justify-end gap-1.5 shrink-0 mt-0.5">
           {status && (
             <span className="text-xs px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30">
               🚧 {status}
             </span>
           )}
-          {role && (
-            <span className="text-xs px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">
-              {role}
+          {badges.map((b) => (
+            <span
+              key={b.label}
+              className={`text-xs px-2 py-0.5 rounded border ${TAG_COLORS[b.color] || DEFAULT_TAG}`}
+            >
+              {b.label}
             </span>
-          )}
+          ))}
         </div>
       </div>
 

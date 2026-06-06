@@ -13,10 +13,14 @@ export const content = {
       contactLabel: 'Contactar',
       contactSection: 'Contacto',
       aboutSection: 'Sobre mí',
-      aboutP1: 'Soy analista de datos, pero antes que eso soy alguien que disfruta entender cómo funcionan los sistemas complejos y traducirlos en algo claro y accionable. Aprendí a trabajar solo, en inglés y a distancia, dentro de comunidades exigentes donde nadie te explica el contexto: te toca investigar, equivocarte y volver a intentar.',
+      aboutP1: {
+        before: 'En los papeles soy analista de datos, pero no me defino por un cargo. Antes que eso soy ',
+        highlight: 'alguien que aprende rápido y disfruta construir cosas con lo que aprende',
+        after: '. Llegué al análisis de datos por las circunstancias; lo que me mantiene es la curiosidad, no el título.',
+      },
       aboutP2: 'Creo en el rigor sin solemnidad: medir antes de opinar, automatizar lo repetitivo y entregar trabajo que otra persona pueda usar sin manual. Hoy aplico ese mismo criterio a machine learning, a pipelines con LLMs y a proyectos web y de marketing para PYMEs.',
       backgroundSection: 'Background',
-      backgroundText: 'Vengo de Ingeniería Civil en Ciencias de la Computación, Universidad de Chile. Cuatro años de trabajo real en comunidades angloparlantes: análisis, whitepapers y coordinación con equipos en EE.UU., 100% remoto desde Chile. Inglés C1 y disponibilidad inmediata.',
+      backgroundText: 'Estudié Ingeniería Civil en Ciencias de la Computación en la Universidad de Chile: aprobé el plan común y cursos de especialización, aunque no terminé la carrera. Cuatro años de trabajo real en comunidades angloparlantes: análisis, whitepapers y coordinación con equipos en EE.UU., de forma remota desde Chile. Inglés C1.',
       skillGroups: {
         analisis: 'Análisis',
         web3: 'Web3 / Blockchain',
@@ -39,6 +43,7 @@ export const content = {
         {
           title: 'ChurnInsight',
           role: 'Data Scientist',
+          roleColor: 'analisis',
           description: 'Solución end-to-end de predicción de churn en equipo de 9 personas durante el hackathon Alura Latam + No Country (Dic 2025). Construí y evalué modelos de ML (Random Forest, KNN, Regresión Logística) sobre 357K registros, ingeniería de 48 features y segmentación de clientes con K-means.',
           tech: ['Python', 'scikit-learn', 'FastAPI', 'Docker', 'MySQL'],
           link: 'https://github.com/ChurnGuard/ChurnInsight',
@@ -47,6 +52,7 @@ export const content = {
         {
           title: 'Blockchain Analytics',
           role: 'Data Analyst',
+          roleColor: 'analisis',
           description: 'Dashboards interactivos y análisis on-chain en Flipside Crypto y CovalentHQ. Métricas clave para proyectos blockchain y reportes accesibles para audiencias diversas. Más de 40 análisis en 13 redes blockchain.',
           tech: ['SQL', 'Blockchain', 'Tableau', 'Looker Studio', 'Flipside Crypto', 'CovalentHQ'],
           linkTo: '/dashboards',
@@ -55,6 +61,7 @@ export const content = {
         {
           title: 'Power BI Dashboards',
           role: 'Data Analyst',
+          roleColor: 'analisis',
           description: 'Dashboards interactivos desarrollados con Power BI durante el curso de Daxus Latam. Reportes con visualizaciones de métricas de negocio y análisis de datos.',
           tech: ['Power BI', 'DAX', 'Data Visualization'],
           link: 'https://github.com/popex404/PowerBI-Dashboards',
@@ -62,27 +69,32 @@ export const content = {
         },
         {
           title: 'A&C Soluciones',
-          role: 'Web Developer',
+          role: 'Landing Page',
+          roleColor: 'marketing',
           description: 'Landing page para A&C Soluciones Agrícolas y Urbanas, empresa de control de plagas certificada SEREMI en Valparaíso. Diseño mobile-first, copy orientado a conversión y SEO local.',
           tech: ['HTML', 'CSS', 'JavaScript', 'SEO'],
           repos: [
-            { label: '🌐 Sitio en producción', url: 'https://www.aycmip.cl/' },
+            { label: '🌐 Ver sitio', url: 'https://www.aycmip.cl/' },
             { label: 'Ver demos', url: 'https://popex404.github.io/fa-ac-demos/' },
           ],
         },
         {
           title: 'Alelyche Ancestral',
-          role: 'Web Developer',
+          role: 'Landing Page',
+          roleColor: 'marketing',
           description: 'Landing page para Alelyche Ancestral, servicio de terapia holística (Reiki, numerología y ceremonias) en Quillota. Diseño a medida, copy orientado a conversión y SEO local.',
           tech: ['HTML', 'CSS', 'JavaScript', 'SEO'],
           repos: [
-            { label: '🌐 Sitio en producción', url: 'https://alelycheancestral.cl/' },
+            { label: '🌐 Ver sitio', url: 'https://alelycheancestral.cl/' },
             { label: 'Ver demos', url: 'https://popex404.github.io/cg-demos/' },
           ],
         },
         {
           title: 'Criterio Legal',
-          role: 'Web · Bot',
+          tags: [
+            { label: 'Bot', color: 'ia' },
+            { label: 'Landing Page', color: 'marketing' },
+          ],
           status: 'En construcción',
           description: 'Sitio y automatización para Criterio Legal, estudio jurídico. Incluye un bot de WhatsApp (Cloud API) para atención y derivación de consultas, hoy en producción. El sitio web está en construcción; por ahora se publica una página de presentación.',
           tech: ['Node.js', 'WhatsApp Cloud API', 'Cloudflare'],
@@ -92,6 +104,7 @@ export const content = {
         {
           title: 'Gabriela Mistral en el Mundo',
           role: 'Data Visualization',
+          roleColor: 'analisis',
           description: 'Mapa interactivo que recorre los lugares visitados por Gabriela Mistral, diseñado en conjunto con Gabriela Rivera. Datos procesados con Python y pandas, visualizados con Folium y publicados en GitHub Pages.',
           tech: ['Python', 'pandas', 'Folium', 'Google Colab'],
           link: 'https://github.com/popex404/Gabriela-Mistral-en-el-Mundo',
@@ -100,6 +113,7 @@ export const content = {
         {
           title: 'Alura Latam ONE',
           role: 'Data Scientist',
+          roleColor: 'analisis',
           description: 'Serie de desafíos del programa Oracle Next Education de Alura Latam. Cada desafío cubre un dominio distinto.',
           tech: ['Python', 'Jupyter', 'SQL', 'MySQL', 'JavaScript'],
           repos: [
@@ -246,10 +260,14 @@ export const content = {
       contactLabel: 'Contact',
       contactSection: 'Contact',
       aboutSection: 'About',
-      aboutP1: "I'm a data analyst, but before that I'm someone who enjoys figuring out how complex systems work and turning them into something clear and actionable. I learned to work solo, in English and remotely, inside demanding communities where no one hands you the context: you research, you get it wrong, and you try again.",
+      aboutP1: {
+        before: "On paper I'm a data analyst, but I don't define myself by a job title. Before that, I'm ",
+        highlight: 'someone who learns fast and loves building things with what he learns',
+        after: '. I came to data analysis through circumstance; what keeps me here is curiosity, not the title.',
+      },
       aboutP2: 'I believe in rigor without solemnity: measure before you opine, automate the repetitive, and ship work someone else can use without a manual. Today I apply that same standard to machine learning, LLM pipelines, and web and marketing projects for small businesses.',
       backgroundSection: 'Background',
-      backgroundText: 'I come from Computer Science Engineering, Universidad de Chile. Four years of real work in English-speaking communities: analyses, whitepapers and coordination with teams in the US, 100% remote from Chile. C1 English and immediate availability.',
+      backgroundText: "I studied Computer Science Engineering at Universidad de Chile: I completed the common core and specialization courses, though I didn't finish the degree. Four years of real work in English-speaking communities: analyses, whitepapers and coordination with US teams, working remotely from Chile. C1 English.",
       skillGroups: {
         analisis: 'Analysis',
         web3: 'Web3 / Blockchain',
@@ -272,6 +290,7 @@ export const content = {
         {
           title: 'ChurnInsight',
           role: 'Data Scientist',
+          roleColor: 'analisis',
           description: 'End-to-end churn prediction solution built in a team of 9 during the Alura Latam + No Country hackathon (Dec 2025). Built and evaluated ML models (Random Forest, KNN, Logistic Regression) on 357K records, engineered 48 features, and segmented customers with K-means.',
           tech: ['Python', 'scikit-learn', 'FastAPI', 'Docker', 'MySQL'],
           link: 'https://github.com/ChurnGuard/ChurnInsight',
@@ -280,6 +299,7 @@ export const content = {
         {
           title: 'Blockchain Analytics',
           role: 'Data Analyst',
+          roleColor: 'analisis',
           description: 'Interactive dashboards and on-chain analyses on Flipside Crypto and CovalentHQ. Key metrics for blockchain projects and accessible reports for diverse audiences. 40+ analyses across 13 blockchain networks.',
           tech: ['SQL', 'Blockchain', 'Tableau', 'Looker Studio', 'Flipside Crypto', 'CovalentHQ'],
           linkTo: '/en/dashboards',
@@ -288,6 +308,7 @@ export const content = {
         {
           title: 'Power BI Dashboards',
           role: 'Data Analyst',
+          roleColor: 'analisis',
           description: 'Interactive dashboards developed with Power BI during the Daxus Latam course. Reports with business metrics visualizations and data analysis.',
           tech: ['Power BI', 'DAX', 'Data Visualization'],
           link: 'https://github.com/popex404/PowerBI-Dashboards',
@@ -295,27 +316,32 @@ export const content = {
         },
         {
           title: 'A&C Soluciones',
-          role: 'Web Developer',
+          role: 'Landing Page',
+          roleColor: 'marketing',
           description: 'Landing page for A&C Soluciones Agrícolas y Urbanas, a SEREMI-certified pest control company in Valparaíso. Mobile-first design, conversion-focused copy and local SEO.',
           tech: ['HTML', 'CSS', 'JavaScript', 'SEO'],
           repos: [
-            { label: '🌐 Live site', url: 'https://www.aycmip.cl/' },
+            { label: '🌐 Visit site', url: 'https://www.aycmip.cl/' },
             { label: 'View demos', url: 'https://popex404.github.io/fa-ac-demos/' },
           ],
         },
         {
           title: 'Alelyche Ancestral',
-          role: 'Web Developer',
+          role: 'Landing Page',
+          roleColor: 'marketing',
           description: 'Landing page for Alelyche Ancestral, a holistic therapy service (Reiki, numerology and ceremonies) in Quillota. Custom design, conversion-focused copy and local SEO.',
           tech: ['HTML', 'CSS', 'JavaScript', 'SEO'],
           repos: [
-            { label: '🌐 Live site', url: 'https://alelycheancestral.cl/' },
+            { label: '🌐 Visit site', url: 'https://alelycheancestral.cl/' },
             { label: 'View demos', url: 'https://popex404.github.io/cg-demos/' },
           ],
         },
         {
           title: 'Criterio Legal',
-          role: 'Web · Bot',
+          tags: [
+            { label: 'Bot', color: 'ia' },
+            { label: 'Landing Page', color: 'marketing' },
+          ],
           status: 'Work in progress',
           description: 'Site and automation for Criterio Legal, a legal practice. Includes a WhatsApp bot (Cloud API) for inquiry intake and routing, now in production. The website is under construction; for now it shows a landing page.',
           tech: ['Node.js', 'WhatsApp Cloud API', 'Cloudflare'],
@@ -325,6 +351,7 @@ export const content = {
         {
           title: 'Gabriela Mistral en el Mundo',
           role: 'Data Visualization',
+          roleColor: 'analisis',
           description: 'Interactive map tracing the places visited by Gabriela Mistral, designed together with Gabriela Rivera. Data processed with Python and pandas, visualized with Folium and published on GitHub Pages.',
           tech: ['Python', 'pandas', 'Folium', 'Google Colab'],
           link: 'https://github.com/popex404/Gabriela-Mistral-en-el-Mundo',
@@ -333,6 +360,7 @@ export const content = {
         {
           title: 'Alura Latam ONE',
           role: 'Data Scientist',
+          roleColor: 'analisis',
           description: 'Challenge series from the Oracle Next Education program by Alura Latam. Each challenge covers a different domain.',
           tech: ['Python', 'Jupyter', 'SQL', 'MySQL', 'JavaScript'],
           repos: [

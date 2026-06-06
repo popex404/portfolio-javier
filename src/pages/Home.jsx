@@ -146,7 +146,11 @@ export default function Home() {
                 {t.aboutSection}
               </h2>
               <div className="space-y-4 text-sm sm:text-base leading-relaxed">
-                <p className="text-foreground">{t.aboutP1}</p>
+                <p className="text-muted-foreground">
+                  {t.aboutP1.before}
+                  <span className="text-foreground font-medium">{t.aboutP1.highlight}</span>
+                  {t.aboutP1.after}
+                </p>
                 <p className="text-muted-foreground">{t.aboutP2}</p>
               </div>
             </section>
